@@ -72,7 +72,7 @@ export function MenuPage() {
           ⚙ Ajustes
         </button>
         <p className="text-center text-xs font-semibold text-blue-200">
-          {settings.timePerPlayer} s por jugador · Respuesta {settings.showAnswer ? 'visible' : 'oculta'}
+          {settings.timePerPlayer} s por jugador · {settings.mode === 'host' ? 'Modo presentador' : 'Modo jugadores'}
         </p>
       </div>
 

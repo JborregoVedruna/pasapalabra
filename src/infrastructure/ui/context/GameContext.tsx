@@ -15,6 +15,10 @@ import { AnswerUseCase } from '../../../application/usecases/AnswerUseCase';
 import { TickUseCase } from '../../../application/usecases/TickUseCase';
 import { PauseGameUseCase } from '../../../application/usecases/PauseGameUseCase';
 import { FinishGameUseCase } from '../../../application/usecases/FinishGameUseCase';
+import {
+  SubmitAnswerUseCase,
+  type SubmitAnswerResult,
+} from '../../../application/usecases/SubmitAnswerUseCase';
 
 const gameRepository = new LocalStorageGameRepository(new StorageAdapter());
 const questionRepository = new JsonQuestionRepository();
@@ -24,6 +28,7 @@ const answerUseCase = new AnswerUseCase();
 const tickUseCase = new TickUseCase();
 const pauseGameUseCase = new PauseGameUseCase();
 const finishGameUseCase = new FinishGameUseCase();
+const submitAnswerUseCase = new SubmitAnswerUseCase(questionRepository, answerUseCase);
 
 const TICK_MS = 100;
 
@@ -37,6 +42,8 @@ interface GameContextType {
   createGame: (starter: PlayerId) => void;
   startTurn: () => void;
   answer: (outcome: AnswerOutcome) => void;
+  /** Modo jugadores: corrige lo escrito y devuelve si era correcto y la respuesta buena. */
+  submitAnswer: (input: string) => SubmitAnswerResult | null;
   /** Detiene el reloj sin cambiar de turno ni de letra. */
   pauseGame: () => void;
   /** Termina la partida ya, con las puntuaciones actuales. */
@@ -111,6 +118,16 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setGame((prev) => (prev ? answerUseCase.execute(prev, outcome, t) : prev));
   };
 
+  const submitAnswer = (input: string): SubmitAnswerResult | null => {
+    if (!game) return null;
+    const t = Date.now();
+    const result = submitAnswerUseCase.execute(game, input, t);
+    if (!result) return null;
+    setNow(t);
+    setGame(result.game);
+    return result;
+  };
+
   const pauseGame = () => {
     const t = Date.now();
     setNow(t);
@@ -134,6 +151,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         createGame,
         startTurn,
         answer,
+        submitAnswer,
         pauseGame,
         finishGame,
         getQuestion: (player, index) => questionRepository.getQuestion(player, index),

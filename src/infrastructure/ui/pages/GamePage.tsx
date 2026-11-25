@@ -4,17 +4,23 @@ import { useGame } from '../context/GameContext';
 import { useWakeLock } from '../hooks/useWakeLock';
 import { Scoreboard } from '../components/Scoreboard';
 import { Rosco } from '../components/Rosco';
-import { HostCard } from '../components/HostCard';
+import { HostCard, type AnswerFeedback } from '../components/HostCard';
 import { ActionBar } from '../components/ActionBar';
 import { PauseModal } from '../components/PauseModal';
 import { liveRemainingMs, msToSeconds, otherPlayer, scoreOf } from '../../../domain/services/RoscoRules';
 
 export function GamePage() {
   const navigate = useNavigate();
-  const { game, now, settings, startTurn, answer, pauseGame, finishGame, resetGame, getQuestion } = useGame();
+  const { game, now, settings, startTurn, answer, submitAnswer, pauseGame, finishGame, resetGame, getQuestion } =
+    useGame();
   /** null = modal cerrado; true/false = si el reloj corría al abrirlo. */
   const [pausedFromRunning, setPausedFromRunning] = useState<boolean | null>(null);
+  /** Resultado de la última respuesta escrita (modo jugadores). */
+  const [feedback, setFeedback] = useState<AnswerFeedback | null>(null);
   useWakeLock(game?.status === 'playing');
+
+  // El aviso (verde o rojo) se mantiene hasta la siguiente interacción:
+  // enviar otra respuesta lo sustituye; Pasapalabra o comenzar turno lo quitan.
 
   if (!game) return <Navigate to="/" replace />;
   if (game.status === 'finished') return <Navigate to="/resumen" replace />;
@@ -24,6 +30,21 @@ export function GamePage() {
   const solo = game.players[otherPlayer(player.id)].done;
   const current = player.letters[player.currentIndex];
   const question = running ? getQuestion(player.id, player.currentIndex) : null;
+
+  const handleStartTurn = () => {
+    setFeedback(null);
+    startTurn();
+  };
+
+  const handleAnswer: typeof answer = (outcome) => {
+    setFeedback(null);
+    answer(outcome);
+  };
+
+  const handleSubmit = (text: string) => {
+    const result = submitAnswer(text);
+    if (result) setFeedback({ outcome: result.outcome, given: text.trim(), expected: result.expected });
+  };
 
   const openPause = () => {
     setPausedFromRunning(running);
@@ -80,11 +101,14 @@ export function GamePage() {
           playerName={player.name}
           solo={solo}
           question={question}
-          showAnswer={settings.showAnswer}
-          onStartTurn={startTurn}
+          mode={settings.mode}
+          questionKey={`${player.id}-${player.currentIndex}`}
+          feedback={feedback}
+          onStartTurn={handleStartTurn}
+          onSubmit={handleSubmit}
         />
 
-        <ActionBar enabled={running} onAnswer={answer} />
+        <ActionBar enabled={running} mode={settings.mode} onAnswer={handleAnswer} />
       </div>
 
       {pausedFromRunning !== null && (

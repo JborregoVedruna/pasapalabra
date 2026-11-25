@@ -39,7 +39,7 @@ src/
 
 ## Persistencia
 
-- `pasapalabra_settings`: tiempo por jugador (por defecto 170 s) y si se muestra la respuesta al presentador (por defecto, sí).
+- `pasapalabra_settings`: tiempo por jugador (por defecto 170 s) y el modo de juego: presentador (ve la respuesta y valida) o jugadores (escriben la respuesta y se corrige sola, sin distinguir mayúsculas ni tildes). Por defecto, presentador.
 - `pasapalabra_game`: estado completo de la partida (letras, tiempos, turno y letra actual), guardado en cada acción y cada 100 ms mientras corre el reloj.
 
 Si se recarga la página con el reloj en marcha, la partida se recupera **en pausa** con el tiempo que quedaba, y el presentador la reanuda con "Comenzar turno".

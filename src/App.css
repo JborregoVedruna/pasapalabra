@@ -23,14 +23,16 @@
 /* Tablero: cabecera arriba, rosco en el hueco central, presentador y botones abajo */
 .screen--game {
   min-height: 100dvh;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 8px;
   padding-top: max(env(safe-area-inset-top), 8px);
   padding-bottom: 0;
 }
 
-/* Tarjeta del presentador + botonera */
+/* Tarjeta del presentador + botonera. Ocupa el espacio sobrante para que el
+   rosco no se mueva: la tarjeta va pegada debajo del rosco y los botones abajo. */
 .game-side {
+  flex: 1 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -58,17 +60,18 @@
   padding-bottom: max(env(safe-area-inset-bottom), 12px);
 }
 
-/* Zona del rosco: ocupa el espacio libre y centra el círculo en ambos ejes */
+/* Botonera siempre al fondo de la pantalla */
+.game-side .action-bar {
+  margin-top: auto;
+}
+
+/* Zona del rosco: posición fija justo debajo de la cabecera (no crece ni se recoloca) */
 .rosco-wrap {
-  flex: 1 1 0;
-  /* Tamaño mínimo razonable: en pantallas muy bajas la página hace scroll en vez de encoger el rosco */
-  min-height: min(88vw, 260px);
+  flex: 0 0 auto;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* El hueco libre (ancho y alto reales) es la referencia para dimensionar el rosco */
-  container-type: size;
 }
 
 .rosco-size {
@@ -80,13 +83,16 @@
   width: min(100%, 42dvh, 340px);
 }
 
-/* El rosco ocupa el lado menor del hueco libre: siempre cuadrado y nunca se solapa
-   con la cabecera ni con la tarjeta del presentador, sea móvil o escritorio. */
+/* Móvil: el tamaño depende SOLO de las dimensiones de la pantalla (ancho y alto),
+   nunca de lo larga que sea la pregunta. Si una pregunta es muy larga en un móvil
+   pequeño, la página hace scroll en vez de encoger el rosco. */
 .rosco-size--game {
-  width: min(100cqw, 100cqh, 400px);
-  height: min(100cqw, 100cqh, 400px);
+  --rosco-size: min(calc(100vw - 32px), 40svh, 400px);
+  width: var(--rosco-size);
+  height: var(--rosco-size);
   padding: 2.5%;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /* ---------- Escritorio / pantallas apaisadas ----------
@@ -114,6 +120,8 @@
     grid-row: 2;
     height: 100%;
     min-height: 0;
+    /* En escritorio el rosco usa el alto de su columna, que no depende de la tarjeta */
+    container-type: size;
   }
 
   .screen--game > .game-side {
@@ -124,12 +132,12 @@
   }
 
   .rosco-size--game {
-    width: min(100cqw, 100cqh, 620px);
-    height: min(100cqw, 100cqh, 620px);
+    --rosco-size: min(100cqw, 100cqh, 620px);
   }
 
   .game-side .action-bar {
     padding-bottom: 0;
+    margin-top: 0;
   }
 }
 

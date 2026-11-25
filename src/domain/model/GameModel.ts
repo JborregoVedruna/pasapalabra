@@ -61,14 +61,20 @@ export interface GameStateModel {
   runningSince: number | null;
 }
 
+/**
+ * host    → modo presentador: el presentador ve la respuesta y valida con Correcto/Incorrecto.
+ * players → modo jugadores: la respuesta no se muestra; el jugador la escribe y se corrige sola.
+ */
+export type GameMode = 'host' | 'players';
+
 export interface SettingsModel {
   /** Tiempo inicial por jugador, en segundos. */
   timePerPlayer: number;
-  /** Mostrar la respuesta correcta al presentador junto a la pregunta. */
-  showAnswer: boolean;
+  /** Modo de juego: presentador o jugadores. */
+  mode: GameMode;
 }
 
-export const DEFAULT_SETTINGS: SettingsModel = { timePerPlayer: 170, showAnswer: true };
+export const DEFAULT_SETTINGS: SettingsModel = { timePerPlayer: 170, mode: 'host' };
 
 export interface GameResultModel {
   winner: PlayerId | null;

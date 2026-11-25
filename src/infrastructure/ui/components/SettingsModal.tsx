@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { SettingsModel } from '../../../domain/model/GameModel';
+import type { GameMode, SettingsModel } from '../../../domain/model/GameModel';
 
 interface SettingsModalProps {
   initial: SettingsModel;
@@ -10,9 +10,24 @@ interface SettingsModalProps {
 const MIN = 10;
 const MAX = 900;
 
+const MODES: { id: GameMode; title: string; description: string; icon: string }[] = [
+  {
+    id: 'host',
+    icon: '🎤',
+    title: 'Modo presentador',
+    description: 'El presentador ve la respuesta y marca Correcto o Incorrecto.',
+  },
+  {
+    id: 'players',
+    icon: '⌨️',
+    title: 'Modo jugadores',
+    description: 'No se ve la respuesta: el jugador la escribe y se corrige sola.',
+  },
+];
+
 export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) {
   const [value, setValue] = useState<string>(String(initial.timePerPlayer));
-  const [showAnswer, setShowAnswer] = useState<boolean>(initial.showAnswer);
+  const [mode, setMode] = useState<GameMode>(initial.mode);
   const parsed = Number(value);
   const valid = Number.isInteger(parsed) && parsed >= MIN && parsed <= MAX;
 
@@ -74,34 +89,42 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
           {valid ? 'Por defecto: 170 segundos.' : `Introduce un número entero entre ${MIN} y ${MAX}.`}
         </p>
 
-        {/* Mostrar respuesta */}
-        <button
-          type="button"
-          role="switch"
-          aria-checked={showAnswer}
-          onClick={() => setShowAnswer((v) => !v)}
-          className="mt-5 flex w-full items-center justify-between gap-3 rounded-2xl border-2 border-blue-100 bg-blue-50 px-4 py-3 text-left active:scale-[0.99]"
-        >
-          <span>
-            <span className="block text-base font-black text-blue-900">Mostrar la respuesta</span>
-            <span className="block text-xs text-slate-500">
-              {showAnswer
-                ? 'La respuesta aparece debajo de la pregunta.'
-                : 'Solo se verá la pregunta durante el juego.'}
-            </span>
-          </span>
-          <span
-            className={`relative h-8 w-14 shrink-0 rounded-full transition-colors ${
-              showAnswer ? 'bg-emerald-500' : 'bg-slate-300'
-            }`}
-          >
-            <span
-              className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${
-                showAnswer ? 'left-7' : 'left-1'
-              }`}
-            />
-          </span>
-        </button>
+        {/* Modo de juego */}
+        <p className="mt-5 text-center text-sm font-bold text-slate-600">Modo de juego</p>
+        <div className="mt-2 flex flex-col gap-2" role="radiogroup" aria-label="Modo de juego">
+          {MODES.map((m) => {
+            const selected = mode === m.id;
+            return (
+              <button
+                key={m.id}
+                type="button"
+                role="radio"
+                aria-checked={selected}
+                onClick={() => setMode(m.id)}
+                className={`flex w-full items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-colors active:scale-[0.99] ${
+                  selected ? 'border-blue-600 bg-blue-50' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <span className="text-2xl leading-none" aria-hidden="true">
+                  {m.icon}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className={`block text-base font-black ${selected ? 'text-blue-900' : 'text-slate-700'}`}>
+                    {m.title}
+                  </span>
+                  <span className="block text-xs text-slate-500">{m.description}</span>
+                </span>
+                <span
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 ${
+                    selected ? 'border-blue-600' : 'border-slate-300'
+                  }`}
+                >
+                  {selected && <span className="h-3 w-3 rounded-full bg-blue-600" />}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
         <div className="mt-6 grid grid-cols-2 gap-3">
           <button
@@ -115,7 +138,7 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
             type="button"
             disabled={!valid}
             onClick={() => {
-              onSave({ timePerPlayer: parsed, showAnswer });
+              onSave({ timePerPlayer: parsed, mode });
               onClose();
             }}
             className="rounded-2xl bg-blue-700 py-4 text-lg font-black text-white active:scale-95 disabled:opacity-40"

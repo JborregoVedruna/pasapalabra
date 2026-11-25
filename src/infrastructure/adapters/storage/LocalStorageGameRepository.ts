@@ -22,8 +22,7 @@ export class LocalStorageGameRepository implements GameRepositoryPort {
     return {
       timePerPlayer:
         typeof time === 'number' && time > 0 ? Math.round(time) : DEFAULT_SETTINGS.timePerPlayer,
-      showAnswer:
-        typeof saved?.showAnswer === 'boolean' ? saved.showAnswer : DEFAULT_SETTINGS.showAnswer,
+      mode: saved?.mode === 'host' || saved?.mode === 'players' ? saved.mode : DEFAULT_SETTINGS.mode,
     };
   }
 
