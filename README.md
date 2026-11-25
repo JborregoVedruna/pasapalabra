@@ -43,3 +43,9 @@ src/
 - `pasapalabra_game`: estado completo de la partida (letras, tiempos, turno y letra actual), guardado en cada acción y cada 100 ms mientras corre el reloj.
 
 Si se recarga la página con el reloj en marcha, la partida se recupera **en pausa** con el tiempo que quedaba, y el presentador la reanuda con "Comenzar turno".
+
+## Despliegue en GitHub Pages
+
+Cada push a `master` ejecuta `.github/workflows/deploy.yml`, que compila con `npm run build` y publica la carpeta `dist` en GitHub Pages (https://jborregovedruna.github.io/pasapalabra/).
+
+Requisito, una sola vez: en el repositorio, **Settings → Pages → Build and deployment → Source: GitHub Actions**.

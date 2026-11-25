@@ -6,7 +6,8 @@ import { AppRouter } from './infrastructure/ui/routes/AppRouter';
 function App() {
   return (
     <GameProvider>
-      <BrowserRouter>
+      {/* basename: "/pasapalabra/" en GitHub Pages, "/" en desarrollo */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <AppRouter />
       </BrowserRouter>
     </GameProvider>
