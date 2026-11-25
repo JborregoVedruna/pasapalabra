@@ -1,0 +1,233 @@
+/* ---------- Pantallas (mobile-first, todo centrado) ---------- */
+.screen {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: max(env(safe-area-inset-top), 16px);
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
+  padding-left: max(env(safe-area-inset-left), 16px);
+  padding-right: max(env(safe-area-inset-right), 16px);
+}
+
+/* Menú y sorteo: contenido agrupado y centrado en vertical */
+.screen--centered {
+  justify-content: center;
+  gap: clamp(24px, 6dvh, 56px);
+}
+
+/* Tablero: cabecera arriba, rosco en el hueco central, presentador y botones abajo */
+.screen--game {
+  min-height: 100dvh;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: max(env(safe-area-inset-top), 8px);
+  padding-bottom: 0;
+}
+
+/* Tarjeta del presentador + botonera */
+.game-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Resumen: lista larga con scroll */
+.screen--scroll {
+  gap: 16px;
+}
+
+/* Bloque centrado de ancho cómodo para el pulgar */
+.section-centered {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-bar {
+  padding-bottom: max(env(safe-area-inset-bottom), 12px);
+}
+
+/* Zona del rosco: ocupa el espacio libre y centra el círculo en ambos ejes */
+.rosco-wrap {
+  flex: 1 1 0;
+  /* Tamaño mínimo razonable: en pantallas muy bajas la página hace scroll en vez de encoger el rosco */
+  min-height: min(88vw, 260px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* El hueco libre (ancho y alto reales) es la referencia para dimensionar el rosco */
+  container-type: size;
+}
+
+.rosco-size {
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+}
+
+.rosco-size--menu {
+  width: min(100%, 42dvh, 340px);
+}
+
+/* El rosco ocupa el lado menor del hueco libre: siempre cuadrado y nunca se solapa
+   con la cabecera ni con la tarjeta del presentador, sea móvil o escritorio. */
+.rosco-size--game {
+  width: min(100cqw, 100cqh, 400px);
+  height: min(100cqw, 100cqh, 400px);
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+/* ---------- Escritorio / pantallas apaisadas ----------
+   Rosco a la izquierda; pregunta y botones a la derecha. */
+@media (min-width: 900px) and (min-aspect-ratio: 1 / 1) {
+  .screen--game {
+    max-width: 1180px;
+    height: 100dvh;
+    min-height: 560px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
+    grid-template-rows: auto minmax(0, 1fr);
+    column-gap: 40px;
+    row-gap: 12px;
+    padding-bottom: 16px;
+  }
+
+  .screen--game > header {
+    grid-column: 1 / -1;
+    max-width: 760px;
+  }
+
+  .screen--game > .rosco-wrap {
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .screen--game > .game-side {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    gap: 16px;
+  }
+
+  .rosco-size--game {
+    width: min(100cqw, 100cqh, 620px);
+    height: min(100cqw, 100cqh, 620px);
+  }
+
+  .game-side .action-bar {
+    padding-bottom: 0;
+  }
+}
+
+/* Modal centrado en pantalla */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Rosco ---------- */
+.rosco {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+}
+
+.rosco-letter {
+  position: absolute;
+  width: 10.5%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 5.6cqw;
+  line-height: 1;
+  color: #fff;
+  border: 0.5cqw solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0.6cqw 1.2cqw rgba(0, 0, 0, 0.35), inset 0 -0.8cqw 0 rgba(0, 0, 0, 0.18);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.rosco-letter--pending {
+  background: radial-gradient(circle at 35% 30%, #60a5fa 0%, #2563eb 55%, #1e3a8a 100%);
+}
+
+.rosco-letter--correct {
+  background: radial-gradient(circle at 35% 30%, #4ade80 0%, #16a34a 55%, #14532d 100%);
+}
+
+.rosco-letter--incorrect {
+  background: radial-gradient(circle at 35% 30%, #f87171 0%, #dc2626 55%, #7f1d1d 100%);
+}
+
+.rosco-letter--current {
+  z-index: 2;
+  border-color: #fcd34d;
+  border-width: 0.9cqw;
+  animation: rosco-blink 0.9s ease-in-out infinite;
+}
+
+@keyframes rosco-blink {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1.22);
+    filter: brightness(1.25);
+    box-shadow: 0 0 0 0.6cqw rgba(252, 211, 77, 0.55), 0 0 4cqw rgba(252, 211, 77, 0.85);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    filter: brightness(0.8);
+    box-shadow: 0 0 0 0 rgba(252, 211, 77, 0), 0 0 1cqw rgba(252, 211, 77, 0.3);
+  }
+}
+
+.rosco-center {
+  position: absolute;
+  inset: 16%;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 35%, rgba(59, 130, 246, 0.35) 0%, rgba(7, 20, 71, 0.65) 70%);
+  border: 0.4cqw solid rgba(147, 197, 253, 0.25);
+}
+
+/* ---------- Sorteo ---------- */
+.draw-winner {
+  animation: draw-pop 0.6s ease-out 1;
+}
+
+@keyframes draw-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(1.05); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rosco-letter--current {
+    animation-duration: 1.8s;
+  }
+}

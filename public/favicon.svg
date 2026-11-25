@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#0b1a4a"/>
+  <g fill="#2563eb" stroke="#fff" stroke-width="1.5">
+    <circle cx="32" cy="9" r="5"/><circle cx="48.3" cy="15.7" r="5"/><circle cx="55" cy="32" r="5"/>
+    <circle cx="48.3" cy="48.3" r="5"/><circle cx="32" cy="55" r="5"/><circle cx="15.7" cy="48.3" r="5"/>
+    <circle cx="9" cy="32" r="5"/><circle cx="15.7" cy="15.7" r="5"/>
+  </g>
+  <circle cx="32" cy="9" r="5" fill="#16a34a" stroke="#fcd34d" stroke-width="2"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#fcd34d">P</text>
+</svg>
