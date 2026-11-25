@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { GameMode, SettingsModel } from '../../../domain/model/GameModel';
+import type { GameMode, QuestionSet, SettingsModel } from '../../../domain/model/GameModel';
 
 interface SettingsModalProps {
   initial: SettingsModel;
@@ -9,6 +9,11 @@ interface SettingsModalProps {
 
 const MIN = 10;
 const MAX = 900;
+
+const QUESTION_SETS: { id: QuestionSet; title: string; description: string }[] = [
+  { id: 'default', title: 'Por defecto', description: 'Una pregunta fija por letra.' },
+  { id: 'custom', title: 'Custom', description: 'Varias por letra; sale una al azar en cada partida.' },
+];
 
 const MODES: { id: GameMode; title: string; description: string; icon: string }[] = [
   {
@@ -28,6 +33,7 @@ const MODES: { id: GameMode; title: string; description: string; icon: string }[
 export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) {
   const [value, setValue] = useState<string>(String(initial.timePerPlayer));
   const [mode, setMode] = useState<GameMode>(initial.mode);
+  const [questionSet, setQuestionSet] = useState<QuestionSet>(initial.questionSet);
   const parsed = Number(value);
   const valid = Number.isInteger(parsed) && parsed >= MIN && parsed <= MAX;
 
@@ -45,7 +51,7 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
       onClick={onClose}
     >
       <div
-        className="w-full max-w-sm rounded-3xl bg-white text-slate-900 p-6 shadow-2xl"
+        className="w-full max-w-sm max-h-[calc(100dvh-32px)] overflow-y-auto rounded-3xl bg-white text-slate-900 p-6 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <h2 id="ajustes-titulo" className="text-center text-2xl font-black text-blue-900">
@@ -126,6 +132,32 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
           })}
         </div>
 
+        {/* Banco de preguntas */}
+        <p className="mt-5 text-center text-sm font-bold text-slate-600">Preguntas</p>
+        <div className="mt-2 grid grid-cols-2 gap-2" role="radiogroup" aria-label="Banco de preguntas">
+          {QUESTION_SETS.map((q) => {
+            const selected = questionSet === q.id;
+            return (
+              <button
+                key={q.id}
+                type="button"
+                role="radio"
+                aria-checked={selected}
+                onClick={() => setQuestionSet(q.id)}
+                className={`flex flex-col items-center rounded-2xl border-2 px-3 py-3 text-center transition-colors active:scale-[0.98] ${
+                  selected ? 'border-blue-600 bg-blue-50' : 'border-slate-200 bg-white'
+                }`}
+              >
+                <span className={`text-base font-black ${selected ? 'text-blue-900' : 'text-slate-700'}`}>
+                  {q.title}
+                </span>
+                <span className="mt-0.5 text-[11px] leading-tight text-slate-500">{q.description}</span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="mt-1 text-center text-[11px] text-slate-400">Se aplica al iniciar una partida nueva.</p>
+
         <div className="mt-6 grid grid-cols-2 gap-3">
           <button
             type="button"
@@ -138,7 +170,7 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
             type="button"
             disabled={!valid}
             onClick={() => {
-              onSave({ timePerPlayer: parsed, mode });
+              onSave({ timePerPlayer: parsed, mode, questionSet });
               onClose();
             }}
             className="rounded-2xl bg-blue-700 py-4 text-lg font-black text-white active:scale-95 disabled:opacity-40"

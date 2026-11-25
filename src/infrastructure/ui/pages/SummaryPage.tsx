@@ -50,14 +50,13 @@ function PlayersAnswer({ letter, answer }: { letter: LetterStateModel; answer: s
 
 export function SummaryPage() {
   const navigate = useNavigate();
-  const { game, getQuestions, resetGame } = useGame();
+  const { game, getQuestion, resetGame } = useGame();
   const [tab, setTab] = useState<PlayerId>('topo');
 
   if (!game || game.status !== 'finished') return <Navigate to="/" replace />;
 
   const result = getGameResultUseCase.execute(game);
   const winnerName = result.winner ? game.players[result.winner].name : null;
-  const questions = getQuestions(tab);
   const letters = game.players[tab].letters;
   const playersMode = game.mode === 'players';
 
@@ -115,7 +114,7 @@ export function SummaryPage() {
 
       <ul className="flex w-full flex-col gap-2">
         {letters.map((l, i) => {
-          const q = questions[i];
+          const q = getQuestion(tab, i);
           return (
             <li key={l.letter} className="flex gap-3 rounded-2xl bg-white/95 p-3 text-slate-900">
               <div

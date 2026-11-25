@@ -1,7 +1,7 @@
 import type { AnswerOutcome, GameStateModel } from '../../domain/model/GameModel';
-import type { QuestionRepositoryPort } from '../../domain/ports/QuestionRepositoryPort';
 import { isCorrectAnswer } from '../../domain/services/AnswerMatcher';
 import { AnswerUseCase } from './AnswerUseCase';
+import { GetQuestionUseCase } from './GetQuestionUseCase';
 
 export interface SubmitAnswerResult {
   game: GameStateModel;
@@ -14,18 +14,18 @@ export interface SubmitAnswerResult {
  * letra actual y aplica Correcto o Incorrecto con las reglas de siempre.
  */
 export class SubmitAnswerUseCase {
-  private readonly questions: QuestionRepositoryPort;
+  private readonly getQuestion: GetQuestionUseCase;
   private readonly answerUseCase: AnswerUseCase;
 
-  constructor(questions: QuestionRepositoryPort, answerUseCase: AnswerUseCase) {
-    this.questions = questions;
+  constructor(getQuestion: GetQuestionUseCase, answerUseCase: AnswerUseCase) {
+    this.getQuestion = getQuestion;
     this.answerUseCase = answerUseCase;
   }
 
   execute(game: GameStateModel, input: string, now: number): SubmitAnswerResult | null {
     if (game.status !== 'playing' || game.phase !== 'running') return null;
     const player = game.players[game.currentPlayer];
-    const expected = this.questions.getQuestion(player.id, player.currentIndex).answer;
+    const expected = this.getQuestion.execute(game, player.id, player.currentIndex).answer;
     const outcome: AnswerOutcome = isCorrectAnswer(input, expected) ? 'correct' : 'incorrect';
     const index = player.currentIndex;
     const next = this.answerUseCase.execute(game, outcome, now);

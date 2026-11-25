@@ -34,6 +34,11 @@ export interface LetterStateModel {
   status: LetterStatus;
   /** Modo jugadores: lo que escribió el jugador al responder esta letra. */
   given?: string;
+  /**
+   * Cuál de las preguntas posibles de esta letra se ha sorteado para la partida.
+   * Se fija al crearla, así que tras un Pasapalabra vuelve a salir la misma.
+   */
+  questionIndex?: number;
 }
 
 export interface PlayerGameStateModel {
@@ -60,6 +65,8 @@ export interface GameStateModel {
   starter: PlayerId;
   /** Modo con el que se juega esta partida (las partidas antiguas sin este dato son de presentador). */
   mode?: GameMode;
+  /** Banco de preguntas de esta partida (las partidas antiguas sin este dato usan el de por defecto). */
+  questionSet?: QuestionSet;
   players: Record<PlayerId, PlayerGameStateModel>;
   /** Marca de tiempo (Date.now) desde la que corre el reloj, o null si está parado. */
   runningSince: number | null;
@@ -71,14 +78,19 @@ export interface GameStateModel {
  */
 export type GameMode = 'host' | 'players';
 
+/** default → defaultGameData.json · custom → customGameData.json */
+export type QuestionSet = 'default' | 'custom';
+
 export interface SettingsModel {
   /** Tiempo inicial por jugador, en segundos. */
   timePerPlayer: number;
   /** Modo de juego: presentador o jugadores. */
   mode: GameMode;
+  /** Banco de preguntas: por defecto o custom. */
+  questionSet: QuestionSet;
 }
 
-export const DEFAULT_SETTINGS: SettingsModel = { timePerPlayer: 170, mode: 'host' };
+export const DEFAULT_SETTINGS: SettingsModel = { timePerPlayer: 170, mode: 'host', questionSet: 'default' };
 
 export interface GameResultModel {
   winner: PlayerId | null;

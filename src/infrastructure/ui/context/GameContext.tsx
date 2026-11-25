@@ -15,6 +15,7 @@ import { AnswerUseCase } from '../../../application/usecases/AnswerUseCase';
 import { TickUseCase } from '../../../application/usecases/TickUseCase';
 import { PauseGameUseCase } from '../../../application/usecases/PauseGameUseCase';
 import { FinishGameUseCase } from '../../../application/usecases/FinishGameUseCase';
+import { GetQuestionUseCase } from '../../../application/usecases/GetQuestionUseCase';
 import {
   SubmitAnswerUseCase,
   type SubmitAnswerResult,
@@ -28,7 +29,8 @@ const answerUseCase = new AnswerUseCase();
 const tickUseCase = new TickUseCase();
 const pauseGameUseCase = new PauseGameUseCase();
 const finishGameUseCase = new FinishGameUseCase();
-const submitAnswerUseCase = new SubmitAnswerUseCase(questionRepository, answerUseCase);
+const getQuestionUseCase = new GetQuestionUseCase(questionRepository);
+const submitAnswerUseCase = new SubmitAnswerUseCase(getQuestionUseCase, answerUseCase);
 
 const TICK_MS = 100;
 
@@ -48,8 +50,8 @@ interface GameContextType {
   pauseGame: () => void;
   /** Termina la partida ya, con las puntuaciones actuales. */
   finishGame: () => void;
+  /** Pregunta sorteada para la letra `index` del jugador en la partida actual. */
   getQuestion: (player: PlayerId, index: number) => QuestionModel;
-  getQuestions: (player: PlayerId) => QuestionModel[];
 }
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -103,7 +105,15 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const createGame = (starter: PlayerId) => {
     const t = Date.now();
     setNow(t);
-    setGame(createGameUseCase.execute(starter, settings.timePerPlayer, settings.mode, t));
+    setGame(
+      createGameUseCase.execute({
+        starter,
+        timePerPlayerSeconds: settings.timePerPlayer,
+        mode: settings.mode,
+        questionSet: settings.questionSet,
+        now: t,
+      }),
+    );
   };
 
   const startTurn = () => {
@@ -154,8 +164,10 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         submitAnswer,
         pauseGame,
         finishGame,
-        getQuestion: (player, index) => questionRepository.getQuestion(player, index),
-        getQuestions: (player) => questionRepository.getQuestions(player),
+        getQuestion: (player, index) => {
+          if (!game) throw new Error('No hay ninguna partida en curso');
+          return getQuestionUseCase.execute(game, player, index);
+        },
       }}
     >
       {children}
