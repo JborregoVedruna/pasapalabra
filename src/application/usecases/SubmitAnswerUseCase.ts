@@ -27,6 +27,11 @@ export class SubmitAnswerUseCase {
     const player = game.players[game.currentPlayer];
     const expected = this.questions.getQuestion(player.id, player.currentIndex).answer;
     const outcome: AnswerOutcome = isCorrectAnswer(input, expected) ? 'correct' : 'incorrect';
-    return { game: this.answerUseCase.execute(game, outcome, now), outcome, expected };
+    const index = player.currentIndex;
+    const next = this.answerUseCase.execute(game, outcome, now);
+    // Se guarda lo escrito para mostrarlo en el resumen final.
+    // (next es una copia nueva, así que se puede modificar sin tocar el estado anterior.)
+    if (next !== game) next.players[player.id].letters[index].given = input.trim();
+    return { game: next, outcome, expected };
   }
 }

@@ -103,7 +103,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const createGame = (starter: PlayerId) => {
     const t = Date.now();
     setNow(t);
-    setGame(createGameUseCase.execute(starter, settings.timePerPlayer, t));
+    setGame(createGameUseCase.execute(starter, settings.timePerPlayer, settings.mode, t));
   };
 
   const startTurn = () => {

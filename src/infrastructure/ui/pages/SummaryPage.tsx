@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { GetGameResultUseCase } from '../../../application/usecases/GetGameResultUseCase';
-import { PLAYER_IDS, type LetterStatus, type PlayerId } from '../../../domain/model/GameModel';
+import {
+  PLAYER_IDS,
+  type LetterStateModel,
+  type LetterStatus,
+  type PlayerId,
+} from '../../../domain/model/GameModel';
 
 const getGameResultUseCase = new GetGameResultUseCase();
 
@@ -18,6 +23,31 @@ const LABEL: Record<LetterStatus, string> = {
   pending: 'Sin responder',
 };
 
+/**
+ * Modo jugadores:
+ * - acertada → la respuesta en verde;
+ * - fallada  → lo que escribió el jugador en rojo y tachado, y al lado la buena en azul;
+ * - sin responder → la respuesta como siempre.
+ */
+function PlayersAnswer({ letter, answer }: { letter: LetterStateModel; answer: string }) {
+  if (letter.status === 'correct') {
+    return <p className="mt-0.5 text-sm font-black uppercase text-emerald-600">{answer}</p>;
+  }
+  if (letter.status === 'incorrect') {
+    return (
+      <p className="mt-0.5 flex flex-wrap items-baseline gap-x-2 text-sm font-black uppercase">
+        {letter.given && (
+          <span className="text-red-600 line-through decoration-2" aria-label={`Respondió ${letter.given}`}>
+            {letter.given}
+          </span>
+        )}
+        <span className="text-blue-700">{answer}</span>
+      </p>
+    );
+  }
+  return <p className="mt-0.5 text-sm font-black uppercase text-blue-800">{answer}</p>;
+}
+
 export function SummaryPage() {
   const navigate = useNavigate();
   const { game, getQuestions, resetGame } = useGame();
@@ -29,6 +59,7 @@ export function SummaryPage() {
   const winnerName = result.winner ? game.players[result.winner].name : null;
   const questions = getQuestions(tab);
   const letters = game.players[tab].letters;
+  const playersMode = game.mode === 'players';
 
   const backToMenu = () => {
     resetGame();
@@ -98,7 +129,11 @@ export function SummaryPage() {
                   {q.type === 'starts' ? 'Empieza por' : 'Contiene la'} {q.letter} · {LABEL[l.status]}
                 </div>
                 <p className="text-sm leading-snug">{q.question}</p>
-                <p className="mt-0.5 text-sm font-black uppercase text-blue-800">{q.answer}</p>
+                {playersMode ? (
+                  <PlayersAnswer letter={l} answer={q.answer} />
+                ) : (
+                  <p className="mt-0.5 text-sm font-black uppercase text-blue-800">{q.answer}</p>
+                )}
               </div>
             </li>
           );

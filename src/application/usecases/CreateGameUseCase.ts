@@ -1,5 +1,6 @@
 import {
   ROSCO_LETTERS,
+  type GameMode,
   type GameStateModel,
   type PlayerGameStateModel,
   type PlayerId,
@@ -14,7 +15,7 @@ export class CreateGameUseCase {
     this.questions = questions;
   }
 
-  execute(starter: PlayerId, timePerPlayerSeconds: number, now: number): GameStateModel {
+  execute(starter: PlayerId, timePerPlayerSeconds: number, mode: GameMode, now: number): GameStateModel {
     const build = (id: PlayerId): PlayerGameStateModel => ({
       id,
       name: this.questions.getPlayer(id).name,
@@ -29,6 +30,7 @@ export class CreateGameUseCase {
       phase: 'running',
       currentPlayer: starter,
       starter,
+      mode,
       players: { topo: build('topo'), bego: build('bego') },
       runningSince: now,
     };

@@ -32,6 +32,8 @@ export interface QuestionModel {
 export interface LetterStateModel {
   letter: RoscoLetter;
   status: LetterStatus;
+  /** Modo jugadores: lo que escribió el jugador al responder esta letra. */
+  given?: string;
 }
 
 export interface PlayerGameStateModel {
@@ -56,6 +58,8 @@ export interface GameStateModel {
   phase: TurnPhase;
   currentPlayer: PlayerId;
   starter: PlayerId;
+  /** Modo con el que se juega esta partida (las partidas antiguas sin este dato son de presentador). */
+  mode?: GameMode;
   players: Record<PlayerId, PlayerGameStateModel>;
   /** Marca de tiempo (Date.now) desde la que corre el reloj, o null si está parado. */
   runningSince: number | null;
