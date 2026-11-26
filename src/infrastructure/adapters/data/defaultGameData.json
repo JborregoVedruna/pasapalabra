@@ -205,190 +205,190 @@
       "A": [
         {
           "type": "starts",
-          "question": "Ave rapaz diurna de gran tamaño y vista muy aguda; la real es la más conocida en España.",
-          "answer": "Águila"
+          "question": "Forma alemana de llamar a una farmacia cuya pronunciación tiene un ligero aroma a vacaciones",
+          "answer": "Apotheke"
         }
       ],
       "B": [
         {
           "type": "starts",
-          "question": "Vehículo de dos ruedas que se mueve gracias a unos pedales.",
-          "answer": "Bicicleta"
+          "question": "Nombre de pila de la señora Norris",
+          "answer": "Begoña"
         }
       ],
       "C": [
         {
           "type": "starts",
-          "question": "Mamífero rumiante que tiene dos jorobas en el lomo y soporta largos periodos sin beber.",
-          "answer": "Camello"
+          "question": "Antiguo miembro del grupo del cual nunca nos acordábamos",
+          "answer": "Curro"
         }
       ],
       "D": [
         {
           "type": "starts",
-          "question": "Mamífero marino muy inteligente y sociable, famoso por sus saltos fuera del agua.",
-          "answer": "Delfín"
+          "question": "Apellido del verdadero amor de la señora Norris",
+          "answer": "Domínguez"
         }
       ],
       "E": [
         {
           "type": "starts",
-          "question": "Recinto con gradas para el público donde se celebran partidos y competiciones deportivas.",
-          "answer": "Estadio"
+          "question": "-",
+          "answer": "E"
         }
       ],
       "F": [
         {
           "type": "starts",
-          "question": "Establecimiento donde se venden medicamentos.",
+          "question": "Motivo por el cual Joaquín quería casarse contigo",
           "answer": "Farmacia"
         }
       ],
       "G": [
         {
           "type": "starts",
-          "question": "Felino doméstico que maúlla y caza ratones.",
-          "answer": "Gato"
+          "question": "Apellido del terrateniente cuya primera teta que tocó fue la tuya",
+          "answer": "Gragera"
         }
       ],
       "H": [
         {
           "type": "starts",
-          "question": "Insecto pequeño que vive en colonias muy organizadas, en hormigueros.",
-          "answer": "Hormiga"
+          "question": "-",
+          "answer": "H"
         }
       ],
       "I": [
         {
           "type": "starts",
-          "question": "Idioma oficial del Reino Unido y de Estados Unidos.",
-          "answer": "Inglés"
+          "question": "Sinónimo de \"mana\"",
+          "answer": "Iqui"
         }
       ],
       "J": [
         {
           "type": "starts",
-          "question": "Producto que, mezclado con agua, sirve para lavarse las manos y hace espuma.",
-          "answer": "Jabón"
+          "question": "Según Facebook, Cuando eras estudiante, estabas estudiando para ser...",
+          "answer": "Juglar"
         }
       ],
       "K": [
         {
           "type": "starts",
-          "question": "Marsupial australiano que vive en los eucaliptos y se alimenta de sus hojas.",
-          "answer": "Koala"
+          "question": "Sigue la serie de palabras: Koke, Keko y...",
+          "answer": "Ketama"
         }
       ],
       "L": [
         {
           "type": "starts",
-          "question": "Felino de gran tamaño, conocido como el rey de la selva, cuyo macho tiene melena.",
-          "answer": "León"
+          "question": "-",
+          "answer": "L"
         }
       ],
       "M": [
         {
           "type": "starts",
-          "question": "Sustancia dulce y espesa que elaboran las abejas a partir del néctar de las flores.",
-          "answer": "Miel"
+          "question": "Durante muchos años, fue tu profesión según Facebook",
+          "answer": "Mamporrera"
         }
       ],
       "N": [
         {
           "type": "starts",
-          "question": "Hija del hijo o de la hija de una persona.",
-          "answer": "Nieta"
+          "question": "-",
+          "answer": "N"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Parte dura que crece en la punta de los dedos de las manos y de los pies.",
-          "answer": "Uña"
+          "question": "Que es lo que le hace falta a Joaquín durante gran parte del verano",
+          "answer": "Bañarse"
         }
       ],
       "O": [
         {
           "type": "starts",
-          "question": "Gran masa de agua salada que separa los continentes; el Pacífico es el más grande.",
-          "answer": "Océano"
+          "question": "Apodo de la pareja de tu mejor amiga",
+          "answer": "Oscar"
         }
       ],
       "P": [
         {
           "type": "starts",
-          "question": "Ave marina que no puede volar, de plumaje blanco y negro, que vive sobre todo en la Antártida.",
-          "answer": "Pingüino"
+          "question": "Apellido del apodo de la pareja de tu mejor amiga",
+          "answer": "Plano"
         }
       ],
       "Q": [
         {
           "type": "starts",
-          "question": "Sala de un hospital preparada para realizar operaciones quirúrgicas.",
-          "answer": "Quirófano"
+          "question": "-",
+          "answer": "Q"
         }
       ],
       "R": [
         {
           "type": "starts",
-          "question": "Corriente natural de agua que fluye de forma continua y desemboca en el mar, en un lago o en otro cauce.",
-          "answer": "Río"
+          "question": "Nombre de la tortuga ninja del antifaz rojo",
+          "answer": "Rafael"
         }
       ],
       "S": [
         {
           "type": "starts",
-          "question": "Mueble con respaldo y normalmente cuatro patas, pensado para que se siente una sola persona.",
-          "answer": "Silla"
+          "question": "-",
+          "answer": "S"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Hortaliza roja, ingrediente principal del gazpacho.",
-          "answer": "Tomate"
+          "question": "Nombre de una mascota peluda que defeca todos los días sobre la arena o aceras de los caños sin que nadie lo recoja",
+          "answer": "Turco"
         }
       ],
       "U": [
         {
           "type": "starts",
-          "question": "Animal fantástico con forma de caballo y un cuerno en la frente.",
-          "answer": "Unicornio"
+          "question": "-",
+          "answer": "U"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "Estación más calurosa del año, entre la primavera y el otoño.",
-          "answer": "Verano"
+          "question": "-",
+          "answer": "V"
         }
       ],
       "W": [
         {
           "type": "starts",
-          "question": "Conexión inalámbrica a internet.",
-          "answer": "Wifi"
+          "question": "-",
+          "answer": "W"
         }
       ],
       "X": [
         {
           "type": "contains",
-          "question": "Automóvil de alquiler con conductor que lleva a los pasajeros a cambio de un precio.",
-          "answer": "Taxi"
+          "question": "Que tenía tu mana en Tuenti en el apartado \"Citas famosas\"",
+          "answer": "Maxi Iglesias"
         }
       ],
       "Y": [
         {
           "type": "starts",
-          "question": "Parte amarilla del huevo.",
-          "answer": "Yema"
+          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable Jose Carlos",
+          "answer": "Yegua"
         }
       ],
       "Z": [
         {
-          "type": "contains",
-          "question": "Fruta de piel roja, verde o amarilla; la tradición la identifica con el fruto prohibido del Paraíso.",
-          "answer": "Manzana"
+          "type": "starts",
+          "question": "-",
+          "answer": "Z"
         }
       ]
     }

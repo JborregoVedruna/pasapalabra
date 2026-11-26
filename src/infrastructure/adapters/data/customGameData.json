@@ -28,8 +28,8 @@
       "C": [
         {
           "type": "starts",
-          "question": "Tipo de vía en la que se establecía Apotho con su furgoneta",
-          "answer": "Callejón"
+          "question": "Liñan que casi mata con una tabla de skim a un niño.",
+          "answer": "Cabe"
         }
       ],
       "D": [
@@ -222,8 +222,8 @@
       "B": [
         {
           "type": "starts",
-          "question": "Vehículo de dos ruedas que se mueve gracias a unos pedales.",
-          "answer": "Bicicleta"
+          "question": "Nombre de pila de la señora Norris",
+          "answer": "Begoña"
         }
       ],
       "C": [
@@ -236,29 +236,29 @@
       "D": [
         {
           "type": "starts",
-          "question": "Mamífero marino muy inteligente y sociable, famoso por sus saltos fuera del agua.",
-          "answer": "Delfín"
+          "question": "Apellido del verdadero amor de la señora Norris",
+          "answer": "Domínguez"
         }
       ],
       "E": [
         {
           "type": "starts",
-          "question": "Recinto con gradas para el público donde se celebran partidos y competiciones deportivas.",
-          "answer": "Estadio"
+          "question": "-",
+          "answer": "E"
         }
       ],
       "F": [
         {
           "type": "starts",
-          "question": "Establecimiento donde se venden medicamentos.",
+          "question": "Motivo por el cual Joaquín quería casarse contigo",
           "answer": "Farmacia"
         }
       ],
       "G": [
         {
           "type": "starts",
-          "question": "Felino doméstico que maúlla y caza ratones.",
-          "answer": "Gato"
+          "question": "Apellido del terrateniente cuya primera teta que tocó fue la tuya",
+          "answer": "Gragera"
         }
       ],
       "H": [
@@ -271,29 +271,29 @@
       "I": [
         {
           "type": "starts",
-          "question": "Idioma oficial del Reino Unido y de Estados Unidos.",
-          "answer": "Inglés"
+          "question": "Sinónimo de \"mana\"",
+          "answer": "Iqui"
         }
       ],
       "J": [
         {
           "type": "starts",
-          "question": "Producto que, mezclado con agua, sirve para lavarse las manos y hace espuma.",
-          "answer": "Jabón"
+          "question": "Según Facebook, Cuando eras estudiante, estabas estudiando para ser...",
+          "answer": "Juglar"
         }
       ],
       "K": [
         {
           "type": "starts",
-          "question": "Jugador cuyo nombre representa lo que más repechas.",
-          "answer": "Koala"
+          "question": "Sigue la serie de palabras: Koke, Keko y...",
+          "answer": "Ketama"
         }
       ],
       "L": [
         {
           "type": "starts",
-          "question": "Felino de gran tamaño, conocido como el rey de la selva, cuyo macho tiene melena.",
-          "answer": "León"
+          "question": "-",
+          "answer": "L"
         }
       ],
       "M": [
@@ -306,22 +306,22 @@
       "N": [
         {
           "type": "starts",
-          "question": "Hija del hijo o de la hija de una persona.",
-          "answer": "Nieta"
+          "question": "-",
+          "answer": "N"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Parte dura que crece en la punta de los dedos de las manos y de los pies.",
-          "answer": "Uña"
+          "question": "Que es lo que le hace falta a Joaquín durante gran parte del verano",
+          "answer": "Bañarse"
         }
       ],
       "O": [
         {
           "type": "starts",
-          "question": "Gran masa de agua salada que separa los continentes; el Pacífico es el más grande.",
-          "answer": "Océano"
+          "question": "Apodo de la pareja de tu mejor amiga",
+          "answer": "Oscar"
         }
       ],
       "P": [
@@ -348,8 +348,8 @@
       "S": [
         {
           "type": "starts",
-          "question": "Mueble con respaldo y normalmente cuatro patas, pensado para que se siente una sola persona.",
-          "answer": "Silla"
+          "question": "-",
+          "answer": "S"
         }
       ],
       "T": [
@@ -362,8 +362,8 @@
       "U": [
         {
           "type": "starts",
-          "question": "Animal fantástico con forma de caballo y un cuerno en la frente.",
-          "answer": "Unicornio"
+          "question": "-",
+          "answer": "U"
         }
       ],
       "V": [
@@ -390,15 +390,15 @@
       "Y": [
         {
           "type": "starts",
-          "question": "Parte amarilla del huevo.",
-          "answer": "Yema"
+          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable Jose Carlos",
+          "answer": "Yegua"
         }
       ],
       "Z": [
         {
-          "type": "contains",
-          "question": "Fruta de piel roja, verde o amarilla; la tradición la identifica con el fruto prohibido del Paraíso.",
-          "answer": "Manzana"
+          "type": "starts",
+          "question": "-",
+          "answer": "Z"
         }
       ]
     }
