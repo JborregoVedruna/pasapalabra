@@ -65,6 +65,11 @@
           "type": "starts",
           "question": "Sensación que sientes a cada momento del día",
           "answer": "Hambre"
+        },
+        {
+          "type": "starts",
+          "question": "Género que más te gusta",
+          "answer": "Hombre"
         }
       ],
       "I": [
@@ -115,8 +120,8 @@
       "N": [
         {
           "type": "starts",
-          "question": "Persona del grupo sinónimo de altavoz",
-          "answer": "Neyba"
+          "question": "Nombre del país cuyo príncipe defecó Arman",
+          "answer": "Namibia"
         }
       ],
       "Ñ": [
