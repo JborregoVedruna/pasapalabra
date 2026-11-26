@@ -17,16 +17,28 @@ inputs:
   respuesta:
     description: 'Respuesta, sin espacios'
     required: true
+  sustituir:
+    description: >-
+      Si es "true" y esa letra de ese jugador solo tiene una pregunta en el banco custom
+      que es una copia exacta de la del banco por defecto, se borra y queda solo la nueva.
+    required: false
+    default: 'false'
   archivo:
     description: 'Ruta del JSON de preguntas custom'
     required: false
     default: 'src/infrastructure/adapters/outbound/data/customGameData.json'
+  archivo_default:
+    description: 'Ruta del JSON de preguntas por defecto (para comprobar si la existente es una copia)'
+    required: false
+    default: 'src/infrastructure/adapters/outbound/data/defaultGameData.json'
 
 outputs:
   commit_message:
     description: 'Mensaje de commit propuesto, p. ej. "Pregunta nueva para Topo (A): Amaral"'
   total:
     description: 'Número de preguntas que tiene ahora esa letra para ese jugador'
+  sustituida:
+    description: '"true" si se ha borrado la copia de la pregunta por defecto'
 
 runs:
   using: node20

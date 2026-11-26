@@ -14,6 +14,12 @@ const TYPES = ['starts', 'contains'];
 
 class ValidationError extends Error {}
 
+/** Copia exacta: mismo tipo, misma pregunta y misma respuesta, carácter a carácter. */
+const isSameQuestion = (a, b) => a.type === b.type && a.question === b.question && a.answer === b.answer;
+
+/** Los inputs booleanos llegan como texto ("true" / "false"). */
+const isTrue = (value) => ['true', '1', 'yes', 'si', 'sí'].includes(value.toLowerCase());
+
 const getInput = (name) => (process.env[`INPUT_${name.toUpperCase()}`] ?? '').trim();
 
 const setOutput = (name, value) => {
@@ -63,6 +69,8 @@ function run() {
     respuesta: getInput('respuesta').normalize('NFC'),
   };
   const file = getInput('archivo') || 'src/infrastructure/adapters/outbound/data/customGameData.json';
+  const defaultFile = getInput('archivo_default') || 'src/infrastructure/adapters/outbound/data/defaultGameData.json';
+  const replace = isTrue(getInput('sustituir'));
 
   validate(input);
 
@@ -79,6 +87,25 @@ function run() {
   if (options.some((q) => normalize(q.question) === normalize(pregunta))) {
     throw new ValidationError(`Esa pregunta ya existe para ${para} en la letra ${letra}.`);
   }
+
+  // Sustitución: solo si la letra tiene UNA pregunta y es una copia exacta de la del banco por defecto
+  let replaced = null;
+  let replaceNote = '';
+  if (replace) {
+    if (options.length !== 1) {
+      replaceNote = `No se sustituye: la ${letra} de ${para} tiene ${options.length} preguntas, no una.`;
+    } else {
+      const defaults = JSON.parse(readFileSync(defaultFile, 'utf8')).questions?.[playerId]?.[letra] ?? [];
+      if (defaults.some((q) => isSameQuestion(q, options[0]))) {
+        replaced = options.splice(0, 1)[0];
+        replaceNote = `Sustituida la copia de la pregunta por defecto: "${replaced.question}" → ${replaced.answer}`;
+      } else {
+        replaceNote = `No se sustituye: la pregunta actual de la ${letra} de ${para} no es una copia de la de por defecto.`;
+      }
+    }
+    console.log(replaceNote);
+  }
+
   options.push({ type: tipo, question: pregunta, answer: respuesta });
 
   // Letras en orden alfabético del rosco
@@ -94,14 +121,21 @@ function run() {
   console.log(`Añadida para ${para} en la ${letra} (${tipo}): "${pregunta}" → ${respuesta}`);
   console.log(`La ${letra} de ${para} tiene ahora ${total} pregunta(s).`);
 
-  setOutput('commit_message', `Pregunta nueva para ${para} (${letra}): ${respuesta}`);
+  setOutput(
+    'commit_message',
+    replaced
+      ? `Pregunta nueva para ${para} (${letra}): ${respuesta} (sustituye a ${replaced.answer})`
+      : `Pregunta nueva para ${para} (${letra}): ${respuesta}`,
+  );
   setOutput('total', String(total));
+  setOutput('sustituida', String(Boolean(replaced)));
 
   const condicion = tipo === 'starts' ? 'Empieza por' : 'Contiene la';
   const cell = (text) => text.replaceAll('|', '\\|');
   writeSummary(
     `### ✅ Pregunta añadida\n\n| Para | Condición | Pregunta | Respuesta |\n|---|---|---|---|\n` +
       `| ${para} | ${condicion} ${letra} | ${cell(pregunta)} | ${cell(respuesta)} |\n\n` +
+      (replace ? `${replaced ? '🔁' : 'ℹ️'} ${cell(replaceNote)}\n\n` : '') +
       `La ${letra} de ${para} tiene ahora **${total}** pregunta(s).\n`,
   );
 }

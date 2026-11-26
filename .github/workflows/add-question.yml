@@ -27,6 +27,11 @@ on:
         description: 'Respuesta (sin espacios)'
         required: true
         type: string
+      sustituir:
+        description: 'Sustituir la pregunta copiada de las de por defecto (solo si es la única de esa letra)'
+        required: false
+        type: boolean
+        default: false
 
 # Una pregunta detrás de otra: si se lanzan varias a la vez, esperan su turno.
 concurrency:
@@ -54,6 +59,7 @@ jobs:
           letra: ${{ inputs.letra }}
           pregunta: ${{ inputs.pregunta }}
           respuesta: ${{ inputs.respuesta }}
+          sustituir: ${{ inputs.sustituir }}
 
       - name: Commit y push
         env:
