@@ -1,0 +1,84 @@
+name: Añadir pregunta custom
+
+# Formulario en la pestaña Actions → "Añadir pregunta custom" → "Run workflow".
+on:
+  workflow_dispatch:
+    inputs:
+      para:
+        description: 'Para'
+        required: true
+        type: choice
+        options: [Topo, Bego]
+      tipo:
+        description: 'Tipo (starts = "Empieza por", contains = "Contiene la")'
+        required: true
+        type: choice
+        options: [starts, contains]
+      letra:
+        description: 'Letra'
+        required: true
+        type: choice
+        options: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, Ñ, O, P, Q, R, S, T, U, V, W, X, Y, Z]
+      pregunta:
+        description: 'Pregunta'
+        required: true
+        type: string
+      respuesta:
+        description: 'Respuesta (sin espacios)'
+        required: true
+        type: string
+
+# Una pregunta detrás de otra: si se lanzan varias a la vez, esperan su turno.
+concurrency:
+  group: add-question
+  cancel-in-progress: false
+
+jobs:
+  add-question:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      # Action propia en JavaScript (.github/actions/add-question): valida los
+      # datos y añade la pregunta a customGameData.json.
+      - name: Validar y añadir la pregunta a customGameData.json
+        id: add
+        uses: ./.github/actions/add-question
+        with:
+          para: ${{ inputs.para }}
+          tipo: ${{ inputs.tipo }}
+          letra: ${{ inputs.letra }}
+          pregunta: ${{ inputs.pregunta }}
+          respuesta: ${{ inputs.respuesta }}
+
+      - name: Commit y push
+        env:
+          COMMIT_MESSAGE: ${{ steps.add.outputs.commit_message }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/infrastructure/adapters/outbound/data/customGameData.json
+          git commit -m "$COMMIT_MESSAGE"
+          # Por si alguien ha subido algo mientras tanto
+          for intento in 1 2 3; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            echo "Push rechazado, reintentando ($intento/3)…"
+            sleep 5
+          done
+          echo "::error::No se pudo subir la pregunta al repositorio."
+          exit 1
+
+  # Un push hecho con el token de Actions no lanza otros workflows, así que se
+  # llama aquí al despliegue para que la pregunta nueva aparezca en la web.
+  deploy:
+    needs: add-question
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

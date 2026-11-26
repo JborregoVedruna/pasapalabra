@@ -1,8 +1,9 @@
 import type { GameResultModel, GameStateModel } from '../../domain/model/GameModel';
 import { msToSeconds, scoreOf } from '../../domain/services/RoscoRules';
+import type { GetGameResultPort } from '../../domain/ports/inbound/GetGameResultPort';
 
 /** Gana quien más acierte; si empatan, quien conserve más segundos; si no, empate. */
-export class GetGameResultUseCase {
+export class GetGameResultUseCase implements GetGameResultPort {
   execute(game: GameStateModel): GameResultModel {
     const { topo, bego } = game.players;
     const scores = { topo: scoreOf(topo), bego: scoreOf(bego) };

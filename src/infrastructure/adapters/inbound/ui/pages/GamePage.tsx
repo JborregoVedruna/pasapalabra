@@ -7,7 +7,7 @@ import { Rosco } from '../components/Rosco';
 import { HostCard, type AnswerFeedback } from '../components/HostCard';
 import { ActionBar } from '../components/ActionBar';
 import { PauseModal } from '../components/PauseModal';
-import { liveRemainingMs, msToSeconds, otherPlayer, scoreOf } from '../../../domain/services/RoscoRules';
+import { liveRemainingMs, msToSeconds, otherPlayer, scoreOf } from '../../../../../domain/services/RoscoRules';
 
 export function GamePage() {
   const navigate = useNavigate();

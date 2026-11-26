@@ -1,29 +1,18 @@
 import {
   ROSCO_LETTERS,
-  type GameMode,
   type GameStateModel,
   type PlayerGameStateModel,
   type PlayerId,
-  type QuestionSet,
 } from '../../domain/model/GameModel';
-import type { QuestionRepositoryPort } from '../../domain/ports/QuestionRepositoryPort';
-
-export interface CreateGameOptions {
-  starter: PlayerId;
-  timePerPlayerSeconds: number;
-  mode: GameMode;
-  questionSet: QuestionSet;
-  now: number;
-  /** Generador aleatorio en [0, 1); se puede inyectar para las pruebas. */
-  random?: () => number;
-}
+import type { QuestionRepositoryPort } from '../../domain/ports/outbound/QuestionRepositoryPort';
+import type { CreateGameOptions, CreateGamePort } from '../../domain/ports/inbound/CreateGamePort';
 
 /**
  * Crea una partida nueva. El jugador elegido en el sorteo empieza con el reloj en marcha.
  * Para cada letra de cada jugador se sortea una de sus preguntas posibles y queda fijada
  * para toda la partida.
  */
-export class CreateGameUseCase {
+export class CreateGameUseCase implements CreateGamePort {
   private readonly questions: QuestionRepositoryPort;
 
   constructor(questions: QuestionRepositoryPort) {

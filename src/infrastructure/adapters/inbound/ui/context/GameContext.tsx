@@ -5,32 +5,19 @@ import type {
   PlayerId,
   QuestionModel,
   SettingsModel,
-} from '../../../domain/model/GameModel';
-import StorageAdapter from '../../adapters/storage/StorageAdapter';
-import { LocalStorageGameRepository } from '../../adapters/storage/LocalStorageGameRepository';
-import { JsonQuestionRepository } from '../../adapters/data/JsonQuestionRepository';
-import { CreateGameUseCase } from '../../../application/usecases/CreateGameUseCase';
-import { StartTurnUseCase } from '../../../application/usecases/StartTurnUseCase';
-import { AnswerUseCase } from '../../../application/usecases/AnswerUseCase';
-import { TickUseCase } from '../../../application/usecases/TickUseCase';
-import { PauseGameUseCase } from '../../../application/usecases/PauseGameUseCase';
-import { FinishGameUseCase } from '../../../application/usecases/FinishGameUseCase';
-import { GetQuestionUseCase } from '../../../application/usecases/GetQuestionUseCase';
+} from '../../../../../domain/model/GameModel';
+import type { SubmitAnswerResult } from '../../../../../domain/ports/inbound/SubmitAnswerPort';
 import {
-  SubmitAnswerUseCase,
-  type SubmitAnswerResult,
-} from '../../../application/usecases/SubmitAnswerUseCase';
-
-const gameRepository = new LocalStorageGameRepository(new StorageAdapter());
-const questionRepository = new JsonQuestionRepository();
-const createGameUseCase = new CreateGameUseCase(questionRepository);
-const startTurnUseCase = new StartTurnUseCase();
-const answerUseCase = new AnswerUseCase();
-const tickUseCase = new TickUseCase();
-const pauseGameUseCase = new PauseGameUseCase();
-const finishGameUseCase = new FinishGameUseCase();
-const getQuestionUseCase = new GetQuestionUseCase(questionRepository);
-const submitAnswerUseCase = new SubmitAnswerUseCase(getQuestionUseCase, answerUseCase);
+  answerUseCase,
+  createGameUseCase,
+  finishGameUseCase,
+  gameRepository,
+  getQuestionUseCase,
+  pauseGameUseCase,
+  startTurnUseCase,
+  submitAnswerUseCase,
+  tickUseCase,
+} from '../../../../config/dependencies';
 
 const TICK_MS = 100;
 

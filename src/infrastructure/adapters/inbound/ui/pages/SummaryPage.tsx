@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
-import { GetGameResultUseCase } from '../../../application/usecases/GetGameResultUseCase';
+import { getGameResultUseCase } from '../../../../config/dependencies';
 import {
   PLAYER_IDS,
   type LetterStateModel,
   type LetterStatus,
   type PlayerId,
-} from '../../../domain/model/GameModel';
-
-const getGameResultUseCase = new GetGameResultUseCase();
+} from '../../../../../domain/model/GameModel';
 
 const DOT: Record<LetterStatus, string> = {
   correct: 'bg-emerald-500',

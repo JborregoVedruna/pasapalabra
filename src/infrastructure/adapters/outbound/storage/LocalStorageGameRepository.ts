@@ -2,9 +2,9 @@ import {
   DEFAULT_SETTINGS,
   type GameStateModel,
   type SettingsModel,
-} from '../../../domain/model/GameModel';
-import type { GameRepositoryPort } from '../../../domain/ports/GameRepositoryPort';
-import type { StoragePort } from '../../../domain/ports/StoragePort';
+} from '../../../../domain/model/GameModel';
+import type { GameRepositoryPort } from '../../../../domain/ports/outbound/GameRepositoryPort';
+import type { StoragePort } from './StoragePort';
 
 const SETTINGS_KEY = 'pasapalabra_settings';
 const GAME_KEY = 'pasapalabra_game';

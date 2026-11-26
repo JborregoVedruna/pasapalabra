@@ -1,8 +1,9 @@
 import type { GameStateModel } from '../../domain/model/GameModel';
 import { canPlay, cloneGame, firstPendingIndex } from '../../domain/services/RoscoRules';
+import type { StartTurnPort } from '../../domain/ports/inbound/StartTurnPort';
 
 /** Reanuda el reloj del jugador al que le toca ("Comenzar turno de …"). */
-export class StartTurnUseCase {
+export class StartTurnUseCase implements StartTurnPort {
   execute(game: GameStateModel, now: number): GameStateModel {
     if (game.status !== 'playing' || game.phase !== 'paused') return game;
     const next = cloneGame(game);

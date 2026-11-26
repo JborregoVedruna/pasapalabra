@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { LetterStateModel } from '../../../domain/model/GameModel';
+import type { LetterStateModel } from '../../../../../domain/model/GameModel';
 
 interface RoscoProps {
   letters: LetterStateModel[];

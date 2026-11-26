@@ -1,4 +1,4 @@
-import type { GameStateModel, SettingsModel } from '../model/GameModel';
+import type { GameStateModel, SettingsModel } from '../../model/GameModel';
 
 export interface GameRepositoryPort {
   loadSettings(): SettingsModel;

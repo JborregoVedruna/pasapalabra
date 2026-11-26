@@ -1,4 +1,4 @@
-import type { StoragePort } from '../../../domain/ports/StoragePort';
+import type { StoragePort } from './StoragePort';
 
 export default class StorageAdapter implements StoragePort {
   getItem<T>(key: string): T | null {

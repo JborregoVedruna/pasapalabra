@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { AnswerOutcome, GameMode, QuestionModel } from '../../../domain/model/GameModel';
+import type { AnswerOutcome, GameMode, QuestionModel } from '../../../../../domain/model/GameModel';
 
 export interface AnswerFeedback {
   outcome: AnswerOutcome;

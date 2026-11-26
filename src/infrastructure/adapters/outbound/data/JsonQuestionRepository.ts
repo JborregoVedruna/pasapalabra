@@ -5,8 +5,8 @@ import type {
   QuestionModel,
   QuestionSet,
   RoscoLetter,
-} from '../../../domain/model/GameModel';
-import type { QuestionRepositoryPort } from '../../../domain/ports/QuestionRepositoryPort';
+} from '../../../../domain/model/GameModel';
+import type { QuestionRepositoryPort } from '../../../../domain/ports/outbound/QuestionRepositoryPort';
 import defaultGameData from './defaultGameData.json';
 import customGameData from './customGameData.json';
 

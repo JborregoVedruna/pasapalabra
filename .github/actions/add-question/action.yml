@@ -1,0 +1,33 @@
+name: Añadir pregunta custom
+description: Valida una pregunta y la añade a customGameData.json en la lista de su jugador y letra.
+
+inputs:
+  para:
+    description: 'Jugador: Topo o Bego'
+    required: true
+  tipo:
+    description: 'starts ("Empieza por") o contains ("Contiene la")'
+    required: true
+  letra:
+    description: 'Una de las 27 letras del rosco'
+    required: true
+  pregunta:
+    description: 'Texto de la pregunta'
+    required: true
+  respuesta:
+    description: 'Respuesta, sin espacios'
+    required: true
+  archivo:
+    description: 'Ruta del JSON de preguntas custom'
+    required: false
+    default: 'src/infrastructure/adapters/outbound/data/customGameData.json'
+
+outputs:
+  commit_message:
+    description: 'Mensaje de commit propuesto, p. ej. "Pregunta nueva para Topo (A): Amaral"'
+  total:
+    description: 'Número de preguntas que tiene ahora esa letra para ese jugador'
+
+runs:
+  using: node20
+  main: index.mjs

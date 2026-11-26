@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import { SettingsModal } from '../components/SettingsModal';
 import { Rosco } from '../components/Rosco';
-import { ROSCO_LETTERS } from '../../../domain/model/GameModel';
+import { ROSCO_LETTERS } from '../../../../../domain/model/GameModel';
 
 const DECOR = ROSCO_LETTERS.map((letter, i) => ({
   letter,

@@ -1,4 +1,4 @@
-import type { AnswerOutcome, GameMode } from '../../../domain/model/GameModel';
+import type { AnswerOutcome, GameMode } from '../../../../../domain/model/GameModel';
 
 interface ActionBarProps {
   enabled: boolean;

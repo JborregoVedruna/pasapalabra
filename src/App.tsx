@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { GameProvider } from './infrastructure/ui/context/GameContext';
-import { AppRouter } from './infrastructure/ui/routes/AppRouter';
+import { GameProvider } from './infrastructure/adapters/inbound/ui/context/GameContext';
+import { AppRouter } from './infrastructure/adapters/inbound/ui/routes/AppRouter';
 
 function App() {
   return (

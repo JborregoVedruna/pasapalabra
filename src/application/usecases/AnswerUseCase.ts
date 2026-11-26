@@ -5,6 +5,7 @@ import {
   endTurn,
   nextPendingIndex,
 } from '../../domain/services/RoscoRules';
+import type { AnswerPort } from '../../domain/ports/inbound/AnswerPort';
 
 /**
  * Aplica la decisión del presentador sobre la letra actual:
@@ -12,7 +13,7 @@ import {
  * - incorrect: rojo, se para el reloj y pasa el turno.
  * - pass: sigue pendiente, se para el reloj y pasa el turno.
  */
-export class AnswerUseCase {
+export class AnswerUseCase implements AnswerPort {
   execute(game: GameStateModel, outcome: AnswerOutcome, now: number): GameStateModel {
     if (game.status !== 'playing' || game.phase !== 'running') return game;
 

@@ -1,8 +1,9 @@
 import type { GameStateModel } from '../../domain/model/GameModel';
 import { cloneGame, commitElapsed, endTurn } from '../../domain/services/RoscoRules';
+import type { TickPort } from '../../domain/ports/inbound/TickPort';
 
 /** Consolida el tiempo transcurrido y gestiona el fin de tiempo del jugador activo. */
-export class TickUseCase {
+export class TickUseCase implements TickPort {
   execute(game: GameStateModel, now: number): GameStateModel {
     if (game.status !== 'playing' || game.phase !== 'running') return game;
     const next = cloneGame(game);

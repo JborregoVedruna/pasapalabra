@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
-import { PLAYER_IDS, type PlayerId } from '../../../domain/model/GameModel';
+import { PLAYER_IDS, type PlayerId } from '../../../../../domain/model/GameModel';
 
 const NAMES: Record<PlayerId, string> = { topo: 'Topo', bego: 'Bego' };
 

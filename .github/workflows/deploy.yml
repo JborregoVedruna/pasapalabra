@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+  # Lo llama "Añadir pregunta custom" después de subir la pregunta
+  workflow_call:
 
 permissions:
   contents: read
@@ -18,7 +20,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Última versión de la rama (incluye la pregunta recién subida si lo llama
+      # "Añadir pregunta custom")
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-node@v4
         with:

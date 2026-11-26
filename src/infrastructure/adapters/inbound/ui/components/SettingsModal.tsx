@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { GameMode, QuestionSet, SettingsModel } from '../../../domain/model/GameModel';
+import type { GameMode, QuestionSet, SettingsModel } from '../../../../../domain/model/GameModel';
 
 interface SettingsModalProps {
   initial: SettingsModel;

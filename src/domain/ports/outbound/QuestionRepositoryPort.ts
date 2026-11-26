@@ -4,7 +4,7 @@ import type {
   QuestionModel,
   QuestionSet,
   RoscoLetter,
-} from '../model/GameModel';
+} from '../../model/GameModel';
 
 export interface QuestionRepositoryPort {
   getPlayers(): PlayerModel[];

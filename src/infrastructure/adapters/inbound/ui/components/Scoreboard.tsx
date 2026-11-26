@@ -1,6 +1,6 @@
-import type { GameStateModel, PlayerId } from '../../../domain/model/GameModel';
-import { PLAYER_IDS } from '../../../domain/model/GameModel';
-import { liveRemainingMs, msToSeconds, scoreOf } from '../../../domain/services/RoscoRules';
+import type { GameStateModel, PlayerId } from '../../../../../domain/model/GameModel';
+import { PLAYER_IDS } from '../../../../../domain/model/GameModel';
+import { liveRemainingMs, msToSeconds, scoreOf } from '../../../../../domain/services/RoscoRules';
 
 interface ScoreboardProps {
   game: GameStateModel;

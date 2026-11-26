@@ -1,23 +1,18 @@
 import type { AnswerOutcome, GameStateModel } from '../../domain/model/GameModel';
 import { isCorrectAnswer } from '../../domain/services/AnswerMatcher';
-import { AnswerUseCase } from './AnswerUseCase';
-import { GetQuestionUseCase } from './GetQuestionUseCase';
-
-export interface SubmitAnswerResult {
-  game: GameStateModel;
-  outcome: AnswerOutcome;
-  expected: string;
-}
+import type { AnswerPort } from '../../domain/ports/inbound/AnswerPort';
+import type { GetQuestionPort } from '../../domain/ports/inbound/GetQuestionPort';
+import type { SubmitAnswerPort, SubmitAnswerResult } from '../../domain/ports/inbound/SubmitAnswerPort';
 
 /**
  * Modo jugadores: compara lo que ha escrito el jugador con la respuesta de la
  * letra actual y aplica Correcto o Incorrecto con las reglas de siempre.
  */
-export class SubmitAnswerUseCase {
-  private readonly getQuestion: GetQuestionUseCase;
-  private readonly answerUseCase: AnswerUseCase;
+export class SubmitAnswerUseCase implements SubmitAnswerPort {
+  private readonly getQuestion: GetQuestionPort;
+  private readonly answerUseCase: AnswerPort;
 
-  constructor(getQuestion: GetQuestionUseCase, answerUseCase: AnswerUseCase) {
+  constructor(getQuestion: GetQuestionPort, answerUseCase: AnswerPort) {
     this.getQuestion = getQuestion;
     this.answerUseCase = answerUseCase;
   }
