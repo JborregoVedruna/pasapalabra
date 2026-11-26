@@ -88,9 +88,16 @@ export interface SettingsModel {
   mode: GameMode;
   /** Banco de preguntas: por defecto o custom. */
   questionSet: QuestionSet;
+  /** Foto del jugador de fondo en el centro del rosco. */
+  showPhotos: boolean;
 }
 
-export const DEFAULT_SETTINGS: SettingsModel = { timePerPlayer: 170, mode: 'host', questionSet: 'default' };
+export const DEFAULT_SETTINGS: SettingsModel = {
+  timePerPlayer: 170,
+  mode: 'host',
+  questionSet: 'default',
+  showPhotos: true,
+};
 
 export interface GameResultModel {
   winner: PlayerId | null;

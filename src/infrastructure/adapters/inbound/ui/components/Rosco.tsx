@@ -6,6 +6,8 @@ interface RoscoProps {
   currentIndex: number | null;
   /** Contenido del centro del rosco. */
   children?: ReactNode;
+  /** Foto de fondo del círculo central (opcional). */
+  photo?: { src: string; alt: string };
 }
 
 const STATUS_CLASS: Record<LetterStateModel['status'], string> = {
@@ -24,7 +26,7 @@ const GAP = 0.08;
  * (y la tipografía en cqw). El tamaño de cada círculo se calcula a partir del
  * número de letras, así que nunca se solapan, sean 25 o 27.
  */
-export function Rosco({ letters, currentIndex, children }: RoscoProps) {
+export function Rosco({ letters, currentIndex, children, photo }: RoscoProps) {
   const total = letters.length;
   // Radio R y diámetro d (en %) tales que d = (1 - GAP) · 2πR / n y R + d/2 ≈ 49.5.
   const factor = ((1 - GAP) * 2 * Math.PI) / total;
@@ -56,7 +58,18 @@ export function Rosco({ letters, currentIndex, children }: RoscoProps) {
           </div>
         );
       })}
-      <div className="rosco-center">{children}</div>
+      {photo ? (
+        <div
+          className="rosco-center rosco-center--photo"
+          style={{ backgroundImage: `url(${photo.src})` }}
+          role="img"
+          aria-label={photo.alt}
+        >
+          {children}
+        </div>
+      ) : (
+        <div className="rosco-center">{children}</div>
+      )}
     </div>
   );
 }

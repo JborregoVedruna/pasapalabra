@@ -73,7 +73,8 @@ export function MenuPage() {
         </button>
         <p className="text-center text-xs font-semibold text-blue-200">
           {settings.timePerPlayer} s por jugador · {settings.mode === 'host' ? 'Modo presentador' : 'Modo jugadores'} ·{' '}
-          {settings.questionSet === 'default' ? 'Preguntas por defecto' : 'Preguntas custom'}
+          {settings.questionSet === 'default' ? 'Preguntas por defecto' : 'Preguntas custom'} ·{' '}
+          {settings.showPhotos ? 'Con fotos' : 'Sin fotos'}
         </p>
       </div>
 

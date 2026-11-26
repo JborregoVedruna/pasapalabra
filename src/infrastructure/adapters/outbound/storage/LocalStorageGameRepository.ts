@@ -27,6 +27,7 @@ export class LocalStorageGameRepository implements GameRepositoryPort {
         saved?.questionSet === 'default' || saved?.questionSet === 'custom'
           ? saved.questionSet
           : DEFAULT_SETTINGS.questionSet,
+      showPhotos: typeof saved?.showPhotos === 'boolean' ? saved.showPhotos : DEFAULT_SETTINGS.showPhotos,
     };
   }
 

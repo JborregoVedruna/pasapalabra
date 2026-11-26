@@ -34,6 +34,7 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
   const [value, setValue] = useState<string>(String(initial.timePerPlayer));
   const [mode, setMode] = useState<GameMode>(initial.mode);
   const [questionSet, setQuestionSet] = useState<QuestionSet>(initial.questionSet);
+  const [showPhotos, setShowPhotos] = useState<boolean>(initial.showPhotos);
   const parsed = Number(value);
   const valid = Number.isInteger(parsed) && parsed >= MIN && parsed <= MAX;
 
@@ -158,6 +159,35 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
         </div>
         <p className="mt-1 text-center text-[11px] text-slate-400">Se aplica al iniciar una partida nueva.</p>
 
+        {/* Fotos en el rosco */}
+        <button
+          type="button"
+          role="switch"
+          aria-checked={showPhotos}
+          onClick={() => setShowPhotos((v) => !v)}
+          className="mt-5 flex w-full items-center justify-between gap-3 rounded-2xl border-2 border-blue-100 bg-blue-50 px-4 py-3 text-left active:scale-[0.99]"
+        >
+          <span>
+            <span className="block text-base font-black text-blue-900">Fotos en el rosco</span>
+            <span className="block text-xs text-slate-500">
+              {showPhotos
+                ? 'La foto del jugador aparece en el centro del rosco.'
+                : 'El centro del rosco muestra el nombre del jugador.'}
+            </span>
+          </span>
+          <span
+            className={`relative h-8 w-14 shrink-0 rounded-full transition-colors ${
+              showPhotos ? 'bg-emerald-500' : 'bg-slate-300'
+            }`}
+          >
+            <span
+              className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${
+                showPhotos ? 'left-7' : 'left-1'
+              }`}
+            />
+          </span>
+        </button>
+
         <div className="mt-6 grid grid-cols-2 gap-3">
           <button
             type="button"
@@ -170,7 +200,7 @@ export function SettingsModal({ initial, onSave, onClose }: SettingsModalProps) 
             type="button"
             disabled={!valid}
             onClick={() => {
-              onSave({ timePerPlayer: parsed, mode, questionSet });
+              onSave({ timePerPlayer: parsed, mode, questionSet, showPhotos });
               onClose();
             }}
             className="rounded-2xl bg-blue-700 py-4 text-lg font-black text-white active:scale-95 disabled:opacity-40"

@@ -7,6 +7,7 @@ import { Rosco } from '../components/Rosco';
 import { HostCard, type AnswerFeedback } from '../components/HostCard';
 import { ActionBar } from '../components/ActionBar';
 import { PauseModal } from '../components/PauseModal';
+import { PLAYER_PHOTOS } from '../assets/players/playerPhotos';
 import { liveRemainingMs, msToSeconds, otherPlayer, scoreOf } from '../../../../../domain/services/RoscoRules';
 
 export function GamePage() {
@@ -78,20 +79,30 @@ export function GamePage() {
 
       <div className="rosco-wrap">
         <div className="rosco-size rosco-size--game">
-          <Rosco letters={player.letters} currentIndex={player.currentIndex}>
-            <div className="text-center">
-              <div className="text-[5.5cqw] font-bold uppercase tracking-widest text-blue-200">
-                Rosco de
+          {settings.showPhotos ? (
+            <Rosco
+              letters={player.letters}
+              currentIndex={player.currentIndex}
+              photo={{ src: PLAYER_PHOTOS[player.id], alt: `Rosco de ${player.name}` }}
+            >
+              {/* Letra y aciertos abajo, sobre un degradado, para no tapar la cara */}
+              <div className="rosco-photo-info">
+                <div className="text-[10cqw] font-black leading-none text-amber-300">{current?.letter}</div>
+                <div className="text-[3.6cqw] font-bold text-white">{scoreOf(player)} aciertos</div>
               </div>
-              <div className="text-[10cqw] font-black leading-none text-white">{player.name}</div>
-              <div className="mt-[2cqw] text-[16cqw] font-black leading-none text-amber-300">
-                {current?.letter}
+            </Rosco>
+          ) : (
+            <Rosco letters={player.letters} currentIndex={player.currentIndex}>
+              <div className="text-center">
+                <div className="text-[5.5cqw] font-bold uppercase tracking-widest text-blue-200">Rosco de</div>
+                <div className="text-[10cqw] font-black leading-none text-white">{player.name}</div>
+                <div className="mt-[2cqw] text-[16cqw] font-black leading-none text-amber-300">
+                  {current?.letter}
+                </div>
+                <div className="mt-[1cqw] text-[4.5cqw] font-bold text-blue-100">{scoreOf(player)} aciertos</div>
               </div>
-              <div className="mt-[1cqw] text-[4.5cqw] font-bold text-blue-100">
-                {scoreOf(player)} aciertos
-              </div>
-            </div>
-          </Rosco>
+            </Rosco>
+          )}
         </div>
       </div>
 
