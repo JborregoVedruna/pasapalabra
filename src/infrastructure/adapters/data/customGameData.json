@@ -14,154 +14,64 @@
       "A": [
         {
           "type": "starts",
-          "question": "Insecto volador que vive en colmenas y produce miel y cera.",
-          "answer": "Abeja"
-        },
-        {
-          "type": "starts",
-          "question": "Vehículo con alas y motores que transporta pasajeros por el aire.",
-          "answer": "Avión"
-        },
-        {
-          "type": "starts",
-          "question": "Juego de tablero de 64 casillas con reyes, damas, alfiles, caballos, torres y peones.",
-          "answer": "Ajedrez"
+          "question": "Grupo de música cuyo nombre podría causarle problemas a un Liñán",
+          "answer": "Amaral"
         }
       ],
       "B": [
         {
           "type": "starts",
-          "question": "Mamífero marino de enorme tamaño que respira a través de un orificio situado en lo alto de la cabeza.",
-          "answer": "Ballena"
-        },
-        {
-          "type": "starts",
-          "question": "Ciudad española donde se encuentra la Sagrada Familia.",
-          "answer": "Barcelona"
-        },
-        {
-          "type": "starts",
-          "question": "Profesional que se dedica a apagar incendios y a rescatar personas.",
-          "answer": "Bombero"
+          "question": "Inflamación usada como justificación para tus actos de cobardía",
+          "answer": "Bursitis"
         }
       ],
       "C": [
         {
           "type": "starts",
-          "question": "Capital de Venezuela.",
-          "answer": "Caracas"
-        },
-        {
-          "type": "starts",
-          "question": "Hortaliza en forma de bulbo que hace llorar al cortarla.",
-          "answer": "Cebolla"
-        },
-        {
-          "type": "starts",
-          "question": "Gran reptil de río con mandíbulas muy potentes y piel escamosa.",
-          "answer": "Cocodrilo"
+          "question": "Tipo de vía en la que se establecía Apotho con su furgoneta",
+          "answer": "Callejón"
         }
       ],
       "D": [
         {
           "type": "starts",
-          "question": "Juego de mesa que se juega con 28 fichas rectangulares marcadas con puntos.",
-          "answer": "Dominó"
-        },
-        {
-          "type": "starts",
-          "question": "Libro que recoge las palabras de una lengua ordenadas alfabéticamente y explica su significado.",
-          "answer": "Diccionario"
-        },
-        {
-          "type": "starts",
-          "question": "Reptil prehistórico que se extinguió hace unos 66 millones de años; el tiranosaurio era uno de ellos.",
-          "answer": "Dinosaurio"
+          "question": "Apodo de tu tocayo vejeriego",
+          "answer": "Denzel"
         }
       ],
       "E": [
         {
           "type": "starts",
-          "question": "Mamífero paquidermo de gran tamaño, con trompa y colmillos de marfil.",
-          "answer": "Elefante"
-        },
-        {
-          "type": "starts",
-          "question": "Serie de peldaños que sirve para subir o bajar.",
-          "answer": "Escalera"
-        },
-        {
-          "type": "starts",
-          "question": "Superficie pulida que refleja la imagen de lo que tiene delante.",
-          "answer": "Espejo"
+          "question": "Sustantivo que se puede usar para describir a tu primo",
+          "answer": "Energúmeno"
         }
       ],
       "F": [
         {
           "type": "starts",
-          "question": "Fruta pequeña y roja que lleva sus semillas en la superficie exterior.",
-          "answer": "Fresa"
-        },
-        {
-          "type": "starts",
-          "question": "Deporte en el que dos equipos de once jugadores intentan meter un balón en la portería contraria.",
-          "answer": "Fútbol"
-        },
-        {
-          "type": "starts",
-          "question": "Torre junto a la costa con una luz potente que orienta a los barcos por la noche.",
-          "answer": "Faro"
+          "question": "Apodo del amigo impresentable de Apotho",
+          "answer": "Felo"
         }
       ],
       "G": [
         {
           "type": "starts",
-          "question": "Instrumento musical de seis cuerdas con caja de resonancia en forma de ocho y mástil con trastes.",
-          "answer": "Guitarra"
-        },
-        {
-          "type": "starts",
-          "question": "Planta de flor grande y amarilla que se orienta hacia el sol y de cuyas semillas salen las pipas.",
-          "answer": "Girasol"
-        },
-        {
-          "type": "starts",
-          "question": "País europeo cuya capital es Atenas.",
-          "answer": "Grecia"
+          "question": "Justificación actual respaldada por el sistema de salud para no hacer planes con tus amigos",
+          "answer": "Guardias"
         }
       ],
       "H": [
         {
           "type": "starts",
-          "question": "Agua convertida en sólido por efecto del frío.",
-          "answer": "Hielo"
-        },
-        {
-          "type": "starts",
-          "question": "Aeronave que se sostiene en el aire gracias a unas hélices horizontales que giran sobre ella.",
-          "answer": "Helicóptero"
-        },
-        {
-          "type": "starts",
-          "question": "Edificio donde se atiende y se cura a los enfermos.",
-          "answer": "Hospital"
+          "question": "Comida que engulliste sin piedad en 2014 para dejar sin cenar a las Iquis",
+          "answer": "Hamburguesa"
         }
       ],
       "I": [
         {
           "type": "starts",
-          "question": "Porción de tierra rodeada de agua por todas partes.",
-          "answer": "Isla"
-        },
-        {
-          "type": "starts",
-          "question": "Templo cristiano donde se celebra la misa.",
-          "answer": "Iglesia"
-        },
-        {
-          "type": "starts",
-          "question": "Objeto que atrae el hierro.",
-          "answer": "Imán"
+          "question": "Infección bacteriana superficial de la piel",
+          "answer": "Impétigo"
         }
       ],
       "J": [
@@ -174,295 +84,130 @@
           "type": "starts",
           "question": "Nombre de tu novio tóxico.",
           "answer": "Joaquín"
+        },
+        {
+          "type": "starts",
+          "question": "Unico producto cárnico que ingiere Cati.",
+          "answer": "Jamón"
         }
       ],
       "K": [
         {
           "type": "starts",
-          "question": "Fruta de piel marrón y vellosa con pulpa verde y pequeñas semillas negras.",
-          "answer": "Kiwi"
-        },
-        {
-          "type": "starts",
-          "question": "Arte marcial japonés en el que se golpea con manos y pies; sus cinturones de colores indican el nivel.",
-          "answer": "Kárate"
-        },
-        {
-          "type": "starts",
-          "question": "Unidad de longitud que equivale a mil metros.",
-          "answer": "Kilómetro"
+          "question": "Simplemente, añádele dos letras al final y disfruta del momento",
+          "answer": "Kikels"
         }
       ],
       "L": [
         {
           "type": "starts",
-          "question": "Único satélite natural de la Tierra.",
-          "answer": "Luna"
-        },
-        {
-          "type": "starts",
-          "question": "Barra de grafito envuelta en madera que sirve para escribir o dibujar.",
-          "answer": "Lápiz"
-        },
-        {
-          "type": "starts",
-          "question": "Hortaliza de hojas verdes que es la base de muchas ensaladas.",
-          "answer": "Lechuga"
+          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en los caños",
+          "answer": "Letongué"
         }
       ],
       "M": [
         {
           "type": "starts",
-          "question": "Cuarto planeta del sistema solar, conocido como el planeta rojo.",
-          "answer": "Marte"
-        },
-        {
-          "type": "starts",
-          "question": "Insecto con alas de colores que antes de serlo fue oruga.",
-          "answer": "Mariposa"
-        },
-        {
-          "type": "starts",
-          "question": "Capital de España.",
-          "answer": "Madrid"
+          "question": "Nombre del usuario de tu ordenador cuyo avatar era un hombre fornido",
+          "answer": "Mengueche"
         }
       ],
       "N": [
         {
           "type": "starts",
-          "question": "Fruto cítrico de color anaranjado con el que se hace un zumo muy popular en el desayuno.",
-          "answer": "Naranja"
-        },
-        {
-          "type": "starts",
-          "question": "Masa de vapor de agua que flota en el cielo.",
-          "answer": "Nube"
-        },
-        {
-          "type": "starts",
-          "question": "Agua helada que cae del cielo en forma de copos blancos.",
-          "answer": "Nieve"
+          "question": "Persona del grupo sinónimo de altavoz",
+          "answer": "Neyba"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Estación del año que va entre el verano y el invierno, cuando caen las hojas de los árboles.",
-          "answer": "Otoño"
-        },
-        {
-          "type": "contains",
-          "question": "Gran elevación natural del terreno; el Everest es la más alta del mundo.",
-          "answer": "Montaña"
-        },
-        {
-          "type": "contains",
-          "question": "Animal de ocho patas que teje telas para atrapar insectos.",
-          "answer": "Araña"
+          "question": "Del grupo, Pelitro es el que tiene más horas de...",
+          "answer": "Sueño"
         }
       ],
       "O": [
         {
-          "type": "starts",
-          "question": "Mamífero plantígrado de gran tamaño y pelaje espeso que hiberna durante el invierno.",
-          "answer": "Oso"
-        },
-        {
-          "type": "starts",
-          "question": "Parte externa del órgano del oído.",
-          "answer": "Oreja"
-        },
-        {
-          "type": "starts",
-          "question": "Mamífero rumiante del que se obtiene la lana.",
-          "answer": "Oveja"
+          "type": "contains",
+          "question": "Persona que presentaste para que le robase los amigos a tu primo",
+          "answer": "Paco"
         }
       ],
       "P": [
         {
           "type": "starts",
-          "question": "País de Sudamérica cuya capital es Lima.",
-          "answer": "Perú"
-        },
-        {
-          "type": "starts",
-          "question": "Utensilio plegable que nos protege de la lluvia.",
-          "answer": "Paraguas"
-        },
-        {
-          "type": "starts",
-          "question": "Construcción de base cuadrada y caras triangulares; las de Egipto son las más famosas.",
-          "answer": "Pirámide"
+          "question": "Cómo denominaba tu abuelo al grupo",
+          "answer": "Pandilla"
         }
       ],
       "Q": [
         {
           "type": "starts",
-          "question": "Alimento que se obtiene cuajando la leche; el manchego es uno de los más famosos.",
-          "answer": "Queso"
-        },
-        {
-          "type": "starts",
-          "question": "Ciencia que estudia la composición de la materia y sus transformaciones.",
-          "answer": "Química"
-        },
-        {
-          "type": "starts",
-          "question": "Caballero creado por Cervantes que confundía los molinos de viento con gigantes.",
-          "answer": "Quijote"
+          "question": "Manifestación de resentimiento muy habitual en este grupo",
+          "answer": "Queja"
         }
       ],
       "R": [
         {
           "type": "starts",
-          "question": "Instrumento que sirve para medir y marcar la hora.",
+          "question": "Nombre de la torre en la que comíamos hamburguesas antes de recogernos",
           "answer": "Reloj"
-        },
-        {
-          "type": "starts",
-          "question": "Pequeño roedor de cola larga; también el aparato con el que se mueve el cursor del ordenador.",
-          "answer": "Ratón"
-        },
-        {
-          "type": "starts",
-          "question": "Capital de Italia.",
-          "answer": "Roma"
         }
       ],
       "S": [
         {
           "type": "starts",
-          "question": "Estrella alrededor de la cual gira la Tierra.",
-          "answer": "Sol"
-        },
-        {
-          "type": "starts",
-          "question": "Reptil sin patas y de cuerpo alargado que se desplaza reptando.",
-          "answer": "Serpiente"
-        },
-        {
-          "type": "starts",
-          "question": "Barco capaz de navegar bajo el agua.",
-          "answer": "Submarino"
+          "question": "Adjetivo que define la manera en la que conducías cuando te sacaste el carnet",
+          "answer": "Suicida"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Reptil de movimientos lentos protegido por un caparazón en el que puede esconder la cabeza y las patas.",
+          "question": "Restaurante de Los Caños que Joaquín odia",
           "answer": "Tortuga"
-        },
-        {
-          "type": "starts",
-          "question": "Gran pez marino depredador con varias filas de dientes afilados.",
-          "answer": "Tiburón"
-        },
-        {
-          "type": "starts",
-          "question": "Instrumento musical de viento, de metal y con tres pistones.",
-          "answer": "Trompeta"
         }
       ],
       "U": [
         {
-          "type": "starts",
-          "question": "Fruto de la vid con el que se elabora el vino.",
-          "answer": "Uva"
-        },
-        {
-          "type": "starts",
-          "question": "Conjunto de todo lo que existe: galaxias, estrellas y planetas.",
-          "answer": "Universo"
-        },
-        {
-          "type": "starts",
-          "question": "Centro de estudios superiores donde se obtienen los títulos de grado.",
-          "answer": "Universidad"
+          "type": "contains",
+          "question": "Ser despreciable que no recibe la aprobación de ninguno de tus amigos",
+          "answer": "Puyana"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "Montaña que expulsa lava, cenizas y gases por su cráter.",
-          "answer": "Volcán"
-        },
-        {
-          "type": "starts",
-          "question": "Instrumento de cuatro cuerdas que se toca con un arco y se apoya entre el hombro y la barbilla.",
-          "answer": "Violín"
-        },
-        {
-          "type": "starts",
-          "question": "Hembra del toro, de la que se obtiene la leche.",
-          "answer": "Vaca"
+          "question": "Que hace un Liñán Maho cuando ve a la policía.",
+          "answer": "Victimizarse"
         }
       ],
       "W": [
         {
           "type": "starts",
-          "question": "Deporte que se juega en una piscina, en el que dos equipos intentan meter un balón en la portería contraria.",
-          "answer": "Waterpolo"
-        },
-        {
-          "type": "starts",
-          "question": "Deporte que se practica sobre una tabla con vela, deslizándose por el agua impulsado por el viento.",
-          "answer": "Windsurf"
-        },
-        {
-          "type": "contains",
-          "question": "Dos rebanadas de pan de molde con algo dentro, como jamón y queso.",
-          "answer": "Sándwich"
+          "question": "Apodo del primo al que te follarías",
+          "answer": "Wam"
         }
       ],
       "X": [
         {
-          "type": "contains",
-          "question": "Prueba oral o escrita que se hace para comprobar los conocimientos de un alumno.",
-          "answer": "Examen"
-        },
-        {
-          "type": "contains",
-          "question": "Deporte de combate en el que dos contrincantes se golpean con guantes.",
-          "answer": "Boxeo"
-        },
-        {
-          "type": "contains",
-          "question": "Gas del aire imprescindible para respirar, cuyo símbolo químico es O.",
-          "answer": "Oxígeno"
+          "type": "starts",
+          "question": "Como se llamaría uno de tus primos si fuese impotente hasta las pelotas",
+          "answer": "Xavier"
         }
       ],
       "Y": [
         {
-          "type": "contains",
-          "question": "Orilla del mar cubierta de arena donde la gente va a bañarse y tomar el sol.",
-          "answer": "Playa"
-        },
-        {
-          "type": "contains",
-          "question": "Artista de circo con nariz roja y ropa llamativa que hace reír al público.",
-          "answer": "Payaso"
-        },
-        {
           "type": "starts",
-          "question": "Alimento lácteo cremoso que se obtiene fermentando la leche.",
-          "answer": "Yogur"
+          "question": "Quién es un monstruo?",
+          "answer": "Yo"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "Calzado que cubre el pie y tiene la suela de un material más duro que el resto.",
-          "answer": "Zapato"
-        },
-        {
-          "type": "starts",
-          "question": "Hortaliza alargada de color naranja, la favorita de los conejos.",
-          "answer": "Zanahoria"
-        },
-        {
-          "type": "starts",
-          "question": "Mamífero carnívoro de cola larga y peluda, famoso por su astucia.",
-          "answer": "Zorro"
+          "question": "Qué prenda da miedo que se quiten Javi y Albert",
+          "answer": "Zapatos"
         }
       ]
     },
@@ -470,18 +215,8 @@
       "A": [
         {
           "type": "starts",
-          "question": "Ave rapaz diurna de gran tamaño y vista muy aguda; la real es la más conocida en España.",
-          "answer": "Águila"
-        },
-        {
-          "type": "starts",
-          "question": "Pequeño roedor de cola muy poblada que vive en los árboles y come frutos secos.",
-          "answer": "Ardilla"
-        },
-        {
-          "type": "starts",
-          "question": "Arco de colores que aparece en el cielo cuando la luz del sol atraviesa las gotas de lluvia.",
-          "answer": "Arcoíris"
+          "question": "El primer y más tóxico hombre de tu vida.",
+          "answer": "Abuelo"
         }
       ],
       "B": [
@@ -489,33 +224,13 @@
           "type": "starts",
           "question": "Vehículo de dos ruedas que se mueve gracias a unos pedales.",
           "answer": "Bicicleta"
-        },
-        {
-          "type": "starts",
-          "question": "Lugar donde se guardan libros para consultarlos o tomarlos prestados.",
-          "answer": "Biblioteca"
-        },
-        {
-          "type": "starts",
-          "question": "Ave rapaz nocturna con penachos de plumas en la cabeza que parecen orejas.",
-          "answer": "Búho"
         }
       ],
       "C": [
         {
           "type": "starts",
-          "question": "Mamífero rumiante que tiene dos jorobas en el lomo y soporta largos periodos sin beber.",
+          "question": "Desde hace años le dices a iqui que le diga a ciertas personas que le folle un...",
           "answer": "Camello"
-        },
-        {
-          "type": "starts",
-          "question": "Edificio fortificado con murallas y torres donde vivían reyes y nobles.",
-          "answer": "Castillo"
-        },
-        {
-          "type": "starts",
-          "question": "Crustáceo con pinzas que camina de lado.",
-          "answer": "Cangrejo"
         }
       ],
       "D": [
@@ -523,16 +238,6 @@
           "type": "starts",
           "question": "Mamífero marino muy inteligente y sociable, famoso por sus saltos fuera del agua.",
           "answer": "Delfín"
-        },
-        {
-          "type": "starts",
-          "question": "Pieza dura de la boca que sirve para morder y masticar.",
-          "answer": "Diente"
-        },
-        {
-          "type": "starts",
-          "question": "Lugar muy seco, con poca vegetación y apenas lluvias, como el Sáhara.",
-          "answer": "Desierto"
         }
       ],
       "E": [
@@ -540,16 +245,6 @@
           "type": "starts",
           "question": "Recinto con gradas para el público donde se celebran partidos y competiciones deportivas.",
           "answer": "Estadio"
-        },
-        {
-          "type": "starts",
-          "question": "Astro que brilla con luz propia en el cielo nocturno.",
-          "answer": "Estrella"
-        },
-        {
-          "type": "starts",
-          "question": "Utensilio con mango largo y cerdas que sirve para barrer.",
-          "answer": "Escoba"
         }
       ],
       "F": [
@@ -557,16 +252,6 @@
           "type": "starts",
           "question": "Establecimiento donde se venden medicamentos.",
           "answer": "Farmacia"
-        },
-        {
-          "type": "starts",
-          "question": "Luz y calor que se desprenden cuando algo arde.",
-          "answer": "Fuego"
-        },
-        {
-          "type": "starts",
-          "question": "Ave de patas largas y plumaje rosado que suele descansar apoyada en una sola pata.",
-          "answer": "Flamenco"
         }
       ],
       "G": [
@@ -574,33 +259,13 @@
           "type": "starts",
           "question": "Felino doméstico que maúlla y caza ratones.",
           "answer": "Gato"
-        },
-        {
-          "type": "starts",
-          "question": "El mayor de los simios, que vive en las selvas de África.",
-          "answer": "Gorila"
-        },
-        {
-          "type": "starts",
-          "question": "Dulce pequeño, plano y crujiente, hecho de harina horneada.",
-          "answer": "Galleta"
         }
       ],
       "H": [
         {
           "type": "starts",
-          "question": "Insecto pequeño que vive en colonias muy organizadas, en hormigueros.",
-          "answer": "Hormiga"
-        },
-        {
-          "type": "starts",
-          "question": "Filete redondo de carne picada que se sirve dentro de un panecillo.",
-          "answer": "Hamburguesa"
-        },
-        {
-          "type": "starts",
-          "question": "Gran mamífero africano que pasa buena parte del día dentro del agua.",
-          "answer": "Hipopótamo"
+          "question": "Cual es el postre favorito de los nudistas (ya que se toma en bolas).",
+          "answer": "Helado"
         }
       ],
       "I": [
@@ -608,16 +273,6 @@
           "type": "starts",
           "question": "Idioma oficial del Reino Unido y de Estados Unidos.",
           "answer": "Inglés"
-        },
-        {
-          "type": "starts",
-          "question": "Gran bloque de hielo que flota en el mar; uno de ellos hundió el Titanic.",
-          "answer": "Iceberg"
-        },
-        {
-          "type": "starts",
-          "question": "Estación más fría del año.",
-          "answer": "Invierno"
         }
       ],
       "J": [
@@ -625,33 +280,13 @@
           "type": "starts",
           "question": "Producto que, mezclado con agua, sirve para lavarse las manos y hace espuma.",
           "answer": "Jabón"
-        },
-        {
-          "type": "starts",
-          "question": "Terreno donde se cultivan plantas y flores para adornar.",
-          "answer": "Jardín"
-        },
-        {
-          "type": "starts",
-          "question": "Felino americano de piel con manchas, el más grande de su continente.",
-          "answer": "Jaguar"
         }
       ],
       "K": [
         {
           "type": "starts",
-          "question": "Marsupial australiano que vive en los eucaliptos y se alimenta de sus hojas.",
+          "question": "Jugador cuyo nombre representa lo que más repechas.",
           "answer": "Koala"
-        },
-        {
-          "type": "starts",
-          "question": "Pequeña embarcación estrecha que se mueve con una pala de dos hojas.",
-          "answer": "Kayak"
-        },
-        {
-          "type": "starts",
-          "question": "Salsa de tomate espesa y dulce que se suele poner a las patatas fritas.",
-          "answer": "Kétchup"
         }
       ],
       "L": [
@@ -659,33 +294,13 @@
           "type": "starts",
           "question": "Felino de gran tamaño, conocido como el rey de la selva, cuyo macho tiene melena.",
           "answer": "León"
-        },
-        {
-          "type": "starts",
-          "question": "Conjunto de hojas impresas y encuadernadas que se leen.",
-          "answer": "Libro"
-        },
-        {
-          "type": "starts",
-          "question": "Fruto cítrico amarillo de sabor muy ácido.",
-          "answer": "Limón"
         }
       ],
       "M": [
         {
           "type": "starts",
-          "question": "Sustancia dulce y espesa que elaboran las abejas a partir del néctar de las flores.",
-          "answer": "Miel"
-        },
-        {
-          "type": "starts",
-          "question": "Único mamífero capaz de volar; duerme cabeza abajo.",
-          "answer": "Murciélago"
-        },
-        {
-          "type": "starts",
-          "question": "Bolsa que se lleva a la espalda sujeta con dos correas.",
-          "answer": "Mochila"
+          "question": "Personaje de Los Caños que en estado de embriaguez cantaba, vomitaba y velaba para que las olas no se la llevasen al mear en la orilla.",
+          "answer": "Marina"
         }
       ],
       "N": [
@@ -693,16 +308,6 @@
           "type": "starts",
           "question": "Hija del hijo o de la hija de una persona.",
           "answer": "Nieta"
-        },
-        {
-          "type": "starts",
-          "question": "Fiesta cristiana que celebra el nacimiento de Jesús el 25 de diciembre.",
-          "answer": "Navidad"
-        },
-        {
-          "type": "starts",
-          "question": "Parte de la cara por la que respiramos y olemos.",
-          "answer": "Nariz"
         }
       ],
       "Ñ": [
@@ -710,16 +315,6 @@
           "type": "contains",
           "question": "Parte dura que crece en la punta de los dedos de las manos y de los pies.",
           "answer": "Uña"
-        },
-        {
-          "type": "contains",
-          "question": "Fruta tropical de pulpa amarilla y corteza rugosa, coronada por hojas.",
-          "answer": "Piña"
-        },
-        {
-          "type": "contains",
-          "question": "Aniversario del día en que nació una persona.",
-          "answer": "Cumpleaños"
         }
       ],
       "O": [
@@ -727,67 +322,27 @@
           "type": "starts",
           "question": "Gran masa de agua salada que separa los continentes; el Pacífico es el más grande.",
           "answer": "Océano"
-        },
-        {
-          "type": "starts",
-          "question": "Órgano de la vista.",
-          "answer": "Ojo"
-        },
-        {
-          "type": "starts",
-          "question": "Conjunto de músicos que tocan juntos bajo las órdenes de un director.",
-          "answer": "Orquesta"
         }
       ],
       "P": [
         {
           "type": "starts",
-          "question": "Ave marina que no puede volar, de plumaje blanco y negro, que vive sobre todo en la Antártida.",
-          "answer": "Pingüino"
-        },
-        {
-          "type": "starts",
-          "question": "Persona que elabora y vende pan.",
-          "answer": "Panadero"
-        },
-        {
-          "type": "starts",
-          "question": "Animal marino de ocho brazos con ventosas; se cocina mucho a la gallega.",
-          "answer": "Pulpo"
+          "question": "Propietario de una sudadera blanca del niño que terminó siendo naranja vómito.",
+          "answer": "Pelitro"
         }
       ],
       "Q": [
         {
           "type": "starts",
-          "question": "Sala de un hospital preparada para realizar operaciones quirúrgicas.",
-          "answer": "Quirófano"
-        },
-        {
-          "type": "starts",
-          "question": "Número que va después del catorce.",
-          "answer": "Quince"
-        },
-        {
-          "type": "contains",
-          "question": "Pala con cuerdas tensadas que se usa para jugar al tenis.",
-          "answer": "Raqueta"
+          "question": "Alimento que te pierde.",
+          "answer": "Queso"
         }
       ],
       "R": [
         {
           "type": "starts",
-          "question": "Corriente natural de agua que fluye de forma continua y desemboca en el mar, en un lago o en otro cauce.",
+          "question": "Es el calvario de todos tus días.",
           "answer": "Río"
-        },
-        {
-          "type": "starts",
-          "question": "Anfibio de piel verde que salta y croa.",
-          "answer": "Rana"
-        },
-        {
-          "type": "starts",
-          "question": "Flor con espinas en el tallo, símbolo del amor.",
-          "answer": "Rosa"
         }
       ],
       "S": [
@@ -795,33 +350,13 @@
           "type": "starts",
           "question": "Mueble con respaldo y normalmente cuatro patas, pensado para que se siente una sola persona.",
           "answer": "Silla"
-        },
-        {
-          "type": "starts",
-          "question": "Fruta grande de corteza verde y pulpa roja con pepitas negras.",
-          "answer": "Sandía"
-        },
-        {
-          "type": "starts",
-          "question": "Ser mitológico con cuerpo de mujer y cola de pez.",
-          "answer": "Sirena"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Hortaliza roja, ingrediente principal del gazpacho.",
-          "answer": "Tomate"
-        },
-        {
-          "type": "starts",
-          "question": "Aparato que sirve para hablar con alguien que está lejos.",
-          "answer": "Teléfono"
-        },
-        {
-          "type": "starts",
-          "question": "Medio de transporte formado por vagones que circula sobre raíles.",
-          "answer": "Tren"
+          "question": "Mascota que te encanta llevar al veterinario.",
+          "answer": "Tiger"
         }
       ],
       "U": [
@@ -829,67 +364,27 @@
           "type": "starts",
           "question": "Animal fantástico con forma de caballo y un cuerno en la frente.",
           "answer": "Unicornio"
-        },
-        {
-          "type": "starts",
-          "question": "Ropa igual que llevan los miembros de un colegio, un equipo o un cuerpo profesional.",
-          "answer": "Uniforme"
-        },
-        {
-          "type": "starts",
-          "question": "País sudamericano cuya capital es Montevideo.",
-          "answer": "Uruguay"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "Estación más calurosa del año, entre la primavera y el otoño.",
-          "answer": "Verano"
-        },
-        {
-          "type": "starts",
-          "question": "Abertura en la pared, normalmente con cristal, que deja pasar la luz y el aire.",
-          "answer": "Ventana"
-        },
-        {
-          "type": "starts",
-          "question": "Personaje de leyenda que chupa la sangre y no se refleja en los espejos.",
-          "answer": "Vampiro"
+          "question": "Apodo de la persona que nos proporcionó una noche inolvidable en el ohana (sobre todo a María Bernal).",
+          "answer": "Veneno"
         }
       ],
       "W": [
         {
           "type": "starts",
-          "question": "Conexión inalámbrica a internet.",
-          "answer": "Wifi"
-        },
-        {
-          "type": "starts",
-          "question": "Capital de Estados Unidos.",
-          "answer": "Washington"
-        },
-        {
-          "type": "contains",
-          "question": "Archipiélago del océano Pacífico que es un estado de Estados Unidos, famoso por sus volcanes y el surf.",
-          "answer": "Hawái"
+          "question": "En inglés, lugar desde el que te tiraste para comerle la boca a un tío.",
+          "answer": "Window"
         }
       ],
       "X": [
         {
           "type": "contains",
-          "question": "Automóvil de alquiler con conductor que lleva a los pasajeros a cambio de un precio.",
-          "answer": "Taxi"
-        },
-        {
-          "type": "contains",
-          "question": "Instrumento de viento de metal con lengüeta, muy usado en el jazz.",
-          "answer": "Saxofón"
-        },
-        {
-          "type": "contains",
-          "question": "Salida en grupo a algún lugar para pasear o visitarlo.",
-          "answer": "Excursión"
+          "question": "Hazaña lograda por Pelitro el 11/03/2025.",
+          "answer": "Sexo"
         }
       ],
       "Y": [
@@ -897,16 +392,6 @@
           "type": "starts",
           "question": "Parte amarilla del huevo.",
           "answer": "Yema"
-        },
-        {
-          "type": "starts",
-          "question": "Embarcación de recreo, a menudo lujosa.",
-          "answer": "Yate"
-        },
-        {
-          "type": "contains",
-          "question": "Edificio donde trabaja el alcalde y se gobierna el municipio.",
-          "answer": "Ayuntamiento"
         }
       ],
       "Z": [
@@ -914,16 +399,6 @@
           "type": "contains",
           "question": "Fruta de piel roja, verde o amarilla; la tradición la identifica con el fruto prohibido del Paraíso.",
           "answer": "Manzana"
-        },
-        {
-          "type": "starts",
-          "question": "Líquido que se obtiene al exprimir una fruta.",
-          "answer": "Zumo"
-        },
-        {
-          "type": "contains",
-          "question": "Comida italiana de masa redonda horneada con tomate y queso por encima.",
-          "answer": "Pizza"
         }
       ]
     }
