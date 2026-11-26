@@ -91,7 +91,7 @@
       "L": [
         {
           "type": "starts",
-          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en los caños",
+          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en Los Caños",
           "answer": "Letongué"
         }
       ],
@@ -126,7 +126,7 @@
       "P": [
         {
           "type": "starts",
-          "question": "Cómo denominaba tu abuelo al grupo",
+          "question": "¿Cómo denominaba tu abuelo al grupo?",
           "answer": "Pandilla"
         }
       ],
@@ -182,21 +182,21 @@
       "X": [
         {
           "type": "starts",
-          "question": "Como se llamaría uno de tus primos si fuese impotente hasta las pelotas",
+          "question": "Cómo se llamaría uno de tus primos si fuese impotente hasta las pelotas",
           "answer": "Xavier"
         }
       ],
       "Y": [
         {
           "type": "starts",
-          "question": "Quién es un monstruo?",
+          "question": "¿Quién es un monstruo?",
           "answer": "Yo"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "Qué prenda da miedo que se quiten Javi y Albert",
+          "question": "¿Qué prenda da miedo que se quiten Javi y Albert?",
           "answer": "Zapatos"
         }
       ]
@@ -233,8 +233,8 @@
       "E": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "E"
+          "question": "Fenómeno astronómico que no quiso ver tu mana por miedo a quedarse ciega",
+          "answer": "Eclipse"
         }
       ],
       "F": [
@@ -254,8 +254,8 @@
       "H": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "H"
+          "question": "Sensación que siente Juanky a cada momento del día",
+          "answer": "Hambre"
         }
       ],
       "I": [
@@ -268,7 +268,7 @@
       "J": [
         {
           "type": "starts",
-          "question": "Según Facebook, Cuando eras estudiante, estabas estudiando para ser...",
+          "question": "Según Facebook, cuando eras estudiante, estabas estudiando para ser...",
           "answer": "Juglar"
         }
       ],
@@ -282,8 +282,8 @@
       "L": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "L"
+          "question": "Sitio favorito de tu mana para comer creps",
+          "answer": "Levante"
         }
       ],
       "M": [
@@ -296,14 +296,14 @@
       "N": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "N"
+          "question": "Persona sinónimo de llegar tarde",
+          "answer": "Neyba"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Que es lo que le hace falta a Joaquín durante gran parte del verano",
+          "question": "¿Qué es lo que le hace falta a Joaquín durante gran parte del verano?",
           "answer": "Bañarse"
         }
       ],
@@ -311,7 +311,7 @@
         {
           "type": "starts",
           "question": "Apodo de la pareja de tu mejor amiga",
-          "answer": "Oscar"
+          "answer": "Óscar"
         }
       ],
       "P": [
@@ -324,8 +324,8 @@
       "Q": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "Q"
+          "question": "Modelo de coche que tuvo un sonido raro en sus primeros quince días sin que su dueña se percatase",
+          "answer": "Q3"
         }
       ],
       "R": [
@@ -338,57 +338,57 @@
       "S": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "S"
+          "question": "Bebida que pedía tu mana cada vez que hacíamos una comida o barbacoa",
+          "answer": "SimonLife"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Nombre de una mascota peluda que defeca todos los días sobre la arena o aceras de los caños sin que nadie lo recoja",
+          "question": "Nombre de una mascota peluda que defeca todos los días sobre la arena o aceras de Los Caños sin que nadie lo recoja",
           "answer": "Turco"
         }
       ],
       "U": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "U"
+          "question": "Pueblo sevillano en el que se ubica un asentamiento Liñán",
+          "answer": "Utrera"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "V"
+          "question": "Ciudad favorita de Joaquín donde está empadronado",
+          "answer": "Valencia"
         }
       ],
       "W": [
         {
-          "type": "starts",
-          "question": "-",
-          "answer": "W"
+          "type": "contains",
+          "question": "Tipo de bizcocho o pastelito cuya adición de marihuana tiene consecuencias destructivas",
+          "answer": "Brownie"
         }
       ],
       "X": [
         {
           "type": "contains",
-          "question": "Que tenía tu mana en Tuenti en el apartado \"Citas famosas\"",
+          "question": "¿Qué tenía tu mana en Tuenti en el apartado \"Citas famosas\"?",
           "answer": "Maxi Iglesias"
         }
       ],
       "Y": [
         {
           "type": "starts",
-          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable Jose Carlos",
+          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable José Carlos",
           "answer": "Yegua"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "Z"
+          "question": "Pedanía barbateña a la que vas a visitar a tu mana",
+          "answer": "Zahora"
         }
       ]
     }

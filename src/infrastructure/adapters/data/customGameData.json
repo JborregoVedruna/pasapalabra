@@ -28,7 +28,7 @@
       "C": [
         {
           "type": "starts",
-          "question": "Liñan que casi mata con una tabla de skim a un niño.",
+          "question": "Liñán que casi mata con una tabla de skim a un niño",
           "answer": "Cabe"
         }
       ],
@@ -77,17 +77,17 @@
       "J": [
         {
           "type": "starts",
-          "question": "Nombre de animal que usamos para expresar que vamos a irnos a casa.",
+          "question": "Nombre de animal que usamos para expresar que vamos a irnos a casa",
           "answer": "Jaguar"
         },
         {
           "type": "starts",
-          "question": "Nombre de tu novio tóxico.",
+          "question": "Nombre de tu novio tóxico",
           "answer": "Joaquín"
         },
         {
           "type": "starts",
-          "question": "Unico producto cárnico que ingiere Cati.",
+          "question": "Único producto cárnico que ingiere Cati",
           "answer": "Jamón"
         }
       ],
@@ -101,7 +101,7 @@
       "L": [
         {
           "type": "starts",
-          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en los caños",
+          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en Los Caños",
           "answer": "Letongué"
         }
       ],
@@ -136,7 +136,7 @@
       "P": [
         {
           "type": "starts",
-          "question": "Cómo denominaba tu abuelo al grupo",
+          "question": "¿Cómo denominaba tu abuelo al grupo?",
           "answer": "Pandilla"
         }
       ],
@@ -178,7 +178,7 @@
       "V": [
         {
           "type": "starts",
-          "question": "Que hace un Liñán Maho cuando ve a la policía.",
+          "question": "¿Qué hace un Liñán Maho cuando ve a la policía?",
           "answer": "Victimizarse"
         }
       ],
@@ -192,21 +192,21 @@
       "X": [
         {
           "type": "starts",
-          "question": "Como se llamaría uno de tus primos si fuese impotente hasta las pelotas",
+          "question": "Cómo se llamaría uno de tus primos si fuese impotente hasta las pelotas",
           "answer": "Xavier"
         }
       ],
       "Y": [
         {
           "type": "starts",
-          "question": "Quién es un monstruo?",
+          "question": "¿Quién es un monstruo?",
           "answer": "Yo"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "Qué prenda da miedo que se quiten Javi y Albert",
+          "question": "¿Qué prenda da miedo que se quiten Javi y Albert?",
           "answer": "Zapatos"
         }
       ]
@@ -215,7 +215,7 @@
       "A": [
         {
           "type": "starts",
-          "question": "El primer y más tóxico hombre de tu vida.",
+          "question": "El primer y más tóxico hombre de tu vida",
           "answer": "Abuelo"
         }
       ],
@@ -229,7 +229,7 @@
       "C": [
         {
           "type": "starts",
-          "question": "Desde hace años le dices a iqui que le diga a ciertas personas que le folle un...",
+          "question": "Desde hace años le dices a Iqui que le diga a ciertas personas que le folle un...",
           "answer": "Camello"
         }
       ],
@@ -243,8 +243,8 @@
       "E": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "E"
+          "question": "Fenómeno astronómico que no quiso ver tu mana por miedo a quedarse ciega",
+          "answer": "Eclipse"
         }
       ],
       "F": [
@@ -264,7 +264,7 @@
       "H": [
         {
           "type": "starts",
-          "question": "Cual es el postre favorito de los nudistas (ya que se toma en bolas).",
+          "question": "¿Cuál es el postre favorito de los nudistas (ya que se toma en bolas)?",
           "answer": "Helado"
         }
       ],
@@ -278,7 +278,7 @@
       "J": [
         {
           "type": "starts",
-          "question": "Según Facebook, Cuando eras estudiante, estabas estudiando para ser...",
+          "question": "Según Facebook, cuando eras estudiante, estabas estudiando para ser...",
           "answer": "Juglar"
         }
       ],
@@ -292,28 +292,28 @@
       "L": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "L"
+          "question": "Sitio favorito de tu mana para comer creps",
+          "answer": "Levante"
         }
       ],
       "M": [
         {
           "type": "starts",
-          "question": "Personaje de Los Caños que en estado de embriaguez cantaba, vomitaba y velaba para que las olas no se la llevasen al mear en la orilla.",
+          "question": "Personaje de Los Caños que en estado de embriaguez cantaba, vomitaba y velaba para que las olas no se la llevasen al mear en la orilla",
           "answer": "Marina"
         }
       ],
       "N": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "N"
+          "question": "Persona sinónimo de llegar tarde",
+          "answer": "Neyba"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Que es lo que le hace falta a Joaquín durante gran parte del verano",
+          "question": "¿Qué es lo que le hace falta a Joaquín durante gran parte del verano?",
           "answer": "Bañarse"
         }
       ],
@@ -321,84 +321,84 @@
         {
           "type": "starts",
           "question": "Apodo de la pareja de tu mejor amiga",
-          "answer": "Oscar"
+          "answer": "Óscar"
         }
       ],
       "P": [
         {
           "type": "starts",
-          "question": "Propietario de una sudadera blanca del niño que terminó siendo naranja vómito.",
+          "question": "Propietario de una sudadera blanca del niño que terminó siendo naranja vómito",
           "answer": "Pelitro"
         }
       ],
       "Q": [
         {
           "type": "starts",
-          "question": "Alimento que te pierde.",
+          "question": "Alimento que te pierde",
           "answer": "Queso"
         }
       ],
       "R": [
         {
           "type": "starts",
-          "question": "Es el calvario de todos tus días.",
+          "question": "Es el calvario de todos tus días",
           "answer": "Río"
         }
       ],
       "S": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "S"
+          "question": "Bebida que pedía tu mana cada vez que hacíamos una comida o barbacoa",
+          "answer": "SimonLife"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Mascota que te encanta llevar al veterinario.",
+          "question": "Mascota que te encanta llevar al veterinario",
           "answer": "Tiger"
         }
       ],
       "U": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "U"
+          "question": "Pueblo sevillano en el que se ubica un asentamiento Liñán",
+          "answer": "Utrera"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "Apodo de la persona que nos proporcionó una noche inolvidable en el ohana (sobre todo a María Bernal).",
+          "question": "Apodo de la persona que nos proporcionó una noche inolvidable en el Ohana (sobre todo a María Bernal)",
           "answer": "Veneno"
         }
       ],
       "W": [
         {
           "type": "starts",
-          "question": "En inglés, lugar desde el que te tiraste para comerle la boca a un tío.",
+          "question": "En inglés, lugar desde el que te tiraste para comerle la boca a un tío",
           "answer": "Window"
         }
       ],
       "X": [
         {
           "type": "contains",
-          "question": "Hazaña lograda por Pelitro el 11/03/2025.",
+          "question": "Hazaña lograda por Pelitro el 11/03/2025",
           "answer": "Sexo"
         }
       ],
       "Y": [
         {
           "type": "starts",
-          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable Jose Carlos",
+          "question": "Animal que adquiriste hace algún tiempo para desconectar y hacer lo que te gusta y de la cual se hace responsable José Carlos",
           "answer": "Yegua"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "-",
-          "answer": "Z"
+          "question": "Pedanía barbateña a la que vas a visitar a tu mana",
+          "answer": "Zahora"
         }
       ]
     }
