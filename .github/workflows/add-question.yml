@@ -4,6 +4,10 @@ name: Añadir pregunta custom
 on:
   workflow_dispatch:
     inputs:
+      json:
+        description: 'JSON (opcional). Si lo rellenas, se ignoran Para, Tipo, Letra, Pregunta y Respuesta'
+        required: false
+        type: string
       para:
         description: 'Para'
         required: true
@@ -20,12 +24,12 @@ on:
         type: choice
         options: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, Ñ, O, P, Q, R, S, T, U, V, W, X, Y, Z]
       pregunta:
-        description: 'Pregunta'
-        required: true
+        description: 'Pregunta (no hace falta si pegas el JSON)'
+        required: false
         type: string
       respuesta:
-        description: 'Respuesta (sin espacios)'
-        required: true
+        description: 'Respuesta sin espacios (no hace falta si pegas el JSON)'
+        required: false
         type: string
       sustituir:
         description: 'Sustituir la pregunta copiada de las de por defecto (solo si es la única de esa letra)'
@@ -54,6 +58,7 @@ jobs:
         id: add
         uses: ./.github/actions/add-question
         with:
+          json: ${{ inputs.json }}
           para: ${{ inputs.para }}
           tipo: ${{ inputs.tipo }}
           letra: ${{ inputs.letra }}

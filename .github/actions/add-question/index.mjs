@@ -59,15 +59,63 @@ function validate({ para, tipo, letra, pregunta, respuesta }) {
   }
 }
 
-function run() {
-  const input = {
-    para: getInput('para'),
-    tipo: getInput('tipo'),
-    letra: getInput('letra').normalize('NFC'),
-    // Espacios repetidos o saltos de línea se quedan en un solo espacio
-    pregunta: getInput('pregunta').split(/\s+/).filter(Boolean).join(' '),
-    respuesta: getInput('respuesta').normalize('NFC'),
+/**
+ * Lee la pregunta desde el JSON pegado, con el formato del correo:
+ * { "to": "Bego", "letter": "X", "question": { "type": "contains", "question": "...", "answer": "..." } }
+ */
+function fromJson(text) {
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch (error) {
+    throw new ValidationError(`El JSON no es válido: ${error.message}`);
+  }
+  if (typeof data !== 'object' || data === null || Array.isArray(data)) {
+    throw new ValidationError('El JSON debe ser un objeto con "to", "letter" y "question".');
+  }
+  const { to, letter, question } = data;
+  if (typeof question !== 'object' || question === null) {
+    throw new ValidationError('Falta el objeto "question" con "type", "question" y "answer".');
+  }
+  const text_ = (value, field) => {
+    if (typeof value !== 'string') throw new ValidationError(`Falta "${field}" o no es un texto.`);
+    return value;
   };
+  // "to" sin distinguir mayúsculas: "Bego", "bego" o "BEGO"
+  const player = Object.keys(PLAYERS).find((name) => name.toLowerCase() === text_(to, 'to').trim().toLowerCase());
+  return {
+    para: player ?? text_(to, 'to').trim(),
+    tipo: text_(question.type, 'question.type').trim(),
+    letra: text_(letter, 'letter').trim().toLocaleUpperCase('es'),
+    pregunta: text_(question.question, 'question.question'),
+    respuesta: text_(question.answer, 'question.answer'),
+  };
+}
+
+function readInput() {
+  const json = getInput('json');
+  const raw = json
+    ? fromJson(json)
+    : {
+        para: getInput('para'),
+        tipo: getInput('tipo'),
+        letra: getInput('letra'),
+        pregunta: getInput('pregunta'),
+        respuesta: getInput('respuesta'),
+      };
+  console.log(json ? 'Origen: JSON pegado (se ignoran los campos del formulario).' : 'Origen: campos del formulario.');
+  return {
+    para: raw.para,
+    tipo: raw.tipo,
+    letra: raw.letra.normalize('NFC'),
+    // Espacios repetidos o saltos de línea se quedan en un solo espacio
+    pregunta: raw.pregunta.split(/\s+/).filter(Boolean).join(' '),
+    respuesta: raw.respuesta.trim().normalize('NFC'),
+  };
+}
+
+function run() {
+  const input = readInput();
   const file = getInput('archivo') || 'src/infrastructure/adapters/outbound/data/customGameData.json';
   const defaultFile = getInput('archivo_default') || 'src/infrastructure/adapters/outbound/data/defaultGameData.json';
   const replace = isTrue(getInput('sustituir'));

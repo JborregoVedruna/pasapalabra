@@ -2,21 +2,27 @@ name: Añadir pregunta custom
 description: Valida una pregunta y la añade a customGameData.json en la lista de su jugador y letra.
 
 inputs:
+  json:
+    description: >-
+      Opcional. Pregunta en JSON: {"to": "Bego", "letter": "X", "question": {"type": "contains",
+      "question": "...", "answer": "..."}}. Si se indica, se ignoran para, tipo, letra, pregunta y respuesta.
+    required: false
+    default: ''
   para:
     description: 'Jugador: Topo o Bego'
-    required: true
+    required: false
   tipo:
     description: 'starts ("Empieza por") o contains ("Contiene la")'
-    required: true
+    required: false
   letra:
     description: 'Una de las 27 letras del rosco'
-    required: true
+    required: false
   pregunta:
     description: 'Texto de la pregunta'
-    required: true
+    required: false
   respuesta:
     description: 'Respuesta, sin espacios'
-    required: true
+    required: false
   sustituir:
     description: >-
       Si es "true" y esa letra de ese jugador solo tiene una pregunta en el banco custom
