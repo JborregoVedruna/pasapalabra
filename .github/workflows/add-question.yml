@@ -4,10 +4,6 @@ name: Añadir pregunta custom
 on:
   workflow_dispatch:
     inputs:
-      json:
-        description: 'JSON (opcional). Si lo rellenas, se ignoran Para, Tipo, Letra, Pregunta y Respuesta'
-        required: false
-        type: string
       para:
         description: 'Para'
         required: true
@@ -36,6 +32,10 @@ on:
         required: false
         type: boolean
         default: false
+      json:
+        description: 'JSON (opcional). Si lo rellenas, se ignoran Para, Tipo, Letra, Pregunta y Respuesta'
+        required: false
+        type: string
 
 # Una pregunta detrás de otra: si se lanzan varias a la vez, esperan su turno.
 concurrency:
@@ -58,13 +58,13 @@ jobs:
         id: add
         uses: ./.github/actions/add-question
         with:
-          json: ${{ inputs.json }}
           para: ${{ inputs.para }}
           tipo: ${{ inputs.tipo }}
           letra: ${{ inputs.letra }}
           pregunta: ${{ inputs.pregunta }}
           respuesta: ${{ inputs.respuesta }}
           sustituir: ${{ inputs.sustituir }}
+          json: ${{ inputs.json }}
 
       - name: Commit y push
         env:
