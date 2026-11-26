@@ -65,6 +65,11 @@
           "type": "starts",
           "question": "Sensación que sientes a cada momento del día",
           "answer": "Hambre"
+        },
+        {
+          "type": "starts",
+          "question": "Género que más te gusta",
+          "answer": "Hombre"
         }
       ],
       "I": [
