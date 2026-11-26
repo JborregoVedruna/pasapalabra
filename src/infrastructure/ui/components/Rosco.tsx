@@ -14,14 +14,22 @@ const STATUS_CLASS: Record<LetterStateModel['status'], string> = {
   incorrect: 'rosco-letter--incorrect',
 };
 
+/** Diámetro máximo de cada círculo, en % del lado del rosco. */
+const MAX_SIZE = 10.5;
+/** Hueco mínimo entre círculos vecinos, como fracción de la distancia entre centros. */
+const GAP = 0.08;
+
 /**
  * Rosco circular responsivo. Todo se dimensiona en porcentaje del contenedor
- * (y la tipografía en cqw), así que los 25 círculos nunca se solapan:
- * diámetro 10.5 % vs. separación entre centros ≈ 11.2 %.
+ * (y la tipografía en cqw). El tamaño de cada círculo se calcula a partir del
+ * número de letras, así que nunca se solapan, sean 25 o 27.
  */
 export function Rosco({ letters, currentIndex, children }: RoscoProps) {
   const total = letters.length;
-  const RADIUS = 44.5; // % del lado del contenedor
+  // Radio R y diámetro d (en %) tales que d = (1 - GAP) · 2πR / n y R + d/2 ≈ 49.5.
+  const factor = ((1 - GAP) * 2 * Math.PI) / total;
+  const size = Math.min(MAX_SIZE, (49.5 * factor) / (1 + factor / 2));
+  const RADIUS = 49.5 - size / 2;
 
   return (
     <div className="rosco" aria-label="Rosco de letras">
@@ -34,7 +42,12 @@ export function Rosco({ letters, currentIndex, children }: RoscoProps) {
           <div
             key={l.letter}
             className={`rosco-letter ${STATUS_CLASS[l.status]} ${isCurrent ? 'rosco-letter--current' : ''}`}
-            style={{ left: `${left}%`, top: `${top}%` }}
+            style={{
+              left: `${left}%`,
+              top: `${top}%`,
+              width: `${size}%`,
+              fontSize: `${size * 0.53}cqw`,
+            }}
             aria-label={`Letra ${l.letter}: ${
               l.status === 'pending' ? 'pendiente' : l.status === 'correct' ? 'acertada' : 'fallada'
             }${isCurrent ? ' (en juego)' : ''}`}

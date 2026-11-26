@@ -14,176 +14,190 @@
       "A": [
         {
           "type": "starts",
-          "question": "Insecto volador que vive en colmenas y produce miel y cera.",
-          "answer": "Abeja"
+          "question": "Grupo de música cuyo nombre podría causarle problemas a un Liñán",
+          "answer": "Amaral"
         }
       ],
       "B": [
         {
           "type": "starts",
-          "question": "Mamífero marino de enorme tamaño que respira a través de un orificio situado en lo alto de la cabeza.",
-          "answer": "Ballena"
+          "question": "Inflamación usada como justificación para tus actos de cobardía",
+          "answer": "Bursitis"
         }
       ],
       "C": [
         {
           "type": "starts",
-          "question": "Capital de Venezuela.",
-          "answer": "Caracas"
+          "question": "Tipo de vía en la que se establecía Apotho con su furgoneta",
+          "answer": "Callejón"
         }
       ],
       "D": [
         {
           "type": "starts",
-          "question": "Juego de mesa que se juega con 28 fichas rectangulares marcadas con puntos.",
-          "answer": "Dominó"
+          "question": "Apodo de tu tocayo vejeriego",
+          "answer": "Denzel"
         }
       ],
       "E": [
         {
           "type": "starts",
-          "question": "Mamífero paquidermo de gran tamaño, con trompa y colmillos de marfil.",
-          "answer": "Elefante"
+          "question": "Sustantivo que se puede usar para describir a tu primo",
+          "answer": "Energúmeno"
         }
       ],
       "F": [
         {
           "type": "starts",
-          "question": "Fruta pequeña y roja que lleva sus semillas en la superficie exterior.",
-          "answer": "Fresa"
+          "question": "Apodo del amigo impresentable de Apotho",
+          "answer": "Felo"
         }
       ],
       "G": [
         {
           "type": "starts",
-          "question": "Instrumento musical de seis cuerdas con caja de resonancia en forma de ocho y mástil con trastes.",
-          "answer": "Guitarra"
+          "question": "Justificación actual respaldada por el sistema de salud para no hacer planes con tus amigos",
+          "answer": "Guardias"
         }
       ],
       "H": [
         {
           "type": "starts",
-          "question": "Agua convertida en sólido por efecto del frío.",
-          "answer": "Hielo"
+          "question": "Comida que engulliste sin piedad en 2014 para dejar sin cenar a las Iquis",
+          "answer": "Hamburguesa"
         }
       ],
       "I": [
         {
           "type": "starts",
-          "question": "Porción de tierra rodeada de agua por todas partes.",
-          "answer": "Isla"
+          "question": "Infección bacteriana superficial de la piel",
+          "answer": "Impétigo"
         }
       ],
       "J": [
         {
           "type": "starts",
-          "question": "Mamífero africano de cuello larguísimo y pelaje con manchas.",
-          "answer": "Jirafa"
+          "question": "Palabra que usan Joaquín y Pablo para insultarse",
+          "answer": "Judío"
+        }
+      ],
+      "K": [
+        {
+          "type": "starts",
+          "question": "Simplemente, añádele dos letras al final y disfruta del momento",
+          "answer": "Kikels"
         }
       ],
       "L": [
         {
           "type": "starts",
-          "question": "Único satélite natural de la Tierra.",
-          "answer": "Luna"
+          "question": "Melodía silbada por Gilabert que nos destruyó durante toda una feria en los caños",
+          "answer": "Letongué"
         }
       ],
       "M": [
         {
           "type": "starts",
-          "question": "Cuarto planeta del sistema solar, conocido como el planeta rojo.",
-          "answer": "Marte"
+          "question": "Nombre del usuario de tu ordenador cuyo avatar era un hombre fornido",
+          "answer": "Mengueche"
         }
       ],
       "N": [
         {
           "type": "starts",
-          "question": "Fruto cítrico de color anaranjado con el que se hace un zumo muy popular en el desayuno.",
-          "answer": "Naranja"
+          "question": "Persona del grupo sinónimo de altavoz",
+          "answer": "Neyba"
         }
       ],
       "Ñ": [
         {
           "type": "contains",
-          "question": "Estación del año que va entre el verano y el invierno, cuando caen las hojas de los árboles.",
-          "answer": "Otoño"
+          "question": "Del grupo, Pelitro es el que tiene más horas de...",
+          "answer": "Sueño"
         }
       ],
       "O": [
         {
-          "type": "starts",
-          "question": "Mamífero plantígrado de gran tamaño y pelaje espeso que hiberna durante el invierno.",
-          "answer": "Oso"
+          "type": "contains",
+          "question": "Persona que presentaste para que le robase los amigos a tu primo",
+          "answer": "Paco"
         }
       ],
       "P": [
         {
           "type": "starts",
-          "question": "País de Sudamérica cuya capital es Lima.",
-          "answer": "Perú"
+          "question": "Cómo denominaba tu abuelo al grupo",
+          "answer": "Pandilla"
         }
       ],
       "Q": [
         {
           "type": "starts",
-          "question": "Alimento que se obtiene cuajando la leche; el manchego es uno de los más famosos.",
-          "answer": "Queso"
+          "question": "Manifestación de resentimiento muy habitual en este grupo",
+          "answer": "Queja"
         }
       ],
       "R": [
         {
           "type": "starts",
-          "question": "Instrumento que sirve para medir y marcar la hora.",
+          "question": "Nombre de la torre en la que comíamos hamburguesas antes de recogernos",
           "answer": "Reloj"
         }
       ],
       "S": [
         {
           "type": "starts",
-          "question": "Estrella alrededor de la cual gira la Tierra.",
-          "answer": "Sol"
+          "question": "Adjetivo que define la manera en la que conducías cuando te sacaste el carnet",
+          "answer": "Suicida"
         }
       ],
       "T": [
         {
           "type": "starts",
-          "question": "Reptil de movimientos lentos protegido por un caparazón en el que puede esconder la cabeza y las patas.",
+          "question": "Restaurante de Los Caños que Joaquín odia",
           "answer": "Tortuga"
         }
       ],
       "U": [
         {
-          "type": "starts",
-          "question": "Fruto de la vid con el que se elabora el vino.",
-          "answer": "Uva"
+          "type": "contains",
+          "question": "Ser despreciable que no recibe la aprobación de ninguno de tus amigos",
+          "answer": "Puyana"
         }
       ],
       "V": [
         {
           "type": "starts",
-          "question": "Montaña que expulsa lava, cenizas y gases por su cráter.",
-          "answer": "Volcán"
+          "question": "Pueblo en el que, en un acto de pura justicia social, Machi perdió su pendiente cremallera",
+          "answer": "Vejer"
+        }
+      ],
+      "W": [
+        {
+          "type": "starts",
+          "question": "Apodo del primo al que te follarías",
+          "answer": "Wam"
         }
       ],
       "X": [
         {
-          "type": "contains",
-          "question": "Prueba oral o escrita que se hace para comprobar los conocimientos de un alumno.",
-          "answer": "Examen"
+          "type": "starts",
+          "question": "Como se llamaría uno de tus primos si fuese impotente hasta las pelotas",
+          "answer": "Xavier"
         }
       ],
       "Y": [
         {
-          "type": "contains",
-          "question": "Orilla del mar cubierta de arena donde la gente va a bañarse y tomar el sol.",
-          "answer": "Playa"
+          "type": "starts",
+          "question": "Quién es un monstruo?",
+          "answer": "Yo"
         }
       ],
       "Z": [
         {
           "type": "starts",
-          "question": "Calzado que cubre el pie y tiene la suela de un material más duro que el resto.",
-          "answer": "Zapato"
+          "question": "Qué prenda da miedo que se quiten Javi y Albert",
+          "answer": "Zapatos"
         }
       ]
     },
@@ -256,6 +270,13 @@
           "type": "starts",
           "question": "Producto que, mezclado con agua, sirve para lavarse las manos y hace espuma.",
           "answer": "Jabón"
+        }
+      ],
+      "K": [
+        {
+          "type": "starts",
+          "question": "Marsupial australiano que vive en los eucaliptos y se alimenta de sus hojas.",
+          "answer": "Koala"
         }
       ],
       "L": [
@@ -340,6 +361,13 @@
           "type": "starts",
           "question": "Estación más calurosa del año, entre la primavera y el otoño.",
           "answer": "Verano"
+        }
+      ],
+      "W": [
+        {
+          "type": "starts",
+          "question": "Conexión inalámbrica a internet.",
+          "answer": "Wifi"
         }
       ],
       "X": [

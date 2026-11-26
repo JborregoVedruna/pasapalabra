@@ -167,18 +167,30 @@
       "J": [
         {
           "type": "starts",
-          "question": "Mamífero africano de cuello larguísimo y pelaje con manchas.",
-          "answer": "Jirafa"
+          "question": "Nombre de animal que usamos para expresar que vamos a irnos a casa.",
+          "answer": "Jaguar"
         },
         {
           "type": "starts",
-          "question": "Pata trasera del cerdo curada con sal; el ibérico es de los más apreciados.",
-          "answer": "Jamón"
+          "question": "Nombre de tu novio tóxico.",
+          "answer": "Joaquín"
+        }
+      ],
+      "K": [
+        {
+          "type": "starts",
+          "question": "Fruta de piel marrón y vellosa con pulpa verde y pequeñas semillas negras.",
+          "answer": "Kiwi"
         },
         {
           "type": "starts",
-          "question": "País asiático formado por islas cuya capital es Tokio.",
-          "answer": "Japón"
+          "question": "Arte marcial japonés en el que se golpea con manos y pies; sus cinturones de colores indican el nivel.",
+          "answer": "Kárate"
+        },
+        {
+          "type": "starts",
+          "question": "Unidad de longitud que equivale a mil metros.",
+          "answer": "Kilómetro"
         }
       ],
       "L": [
@@ -383,6 +395,23 @@
           "type": "starts",
           "question": "Hembra del toro, de la que se obtiene la leche.",
           "answer": "Vaca"
+        }
+      ],
+      "W": [
+        {
+          "type": "starts",
+          "question": "Deporte que se juega en una piscina, en el que dos equipos intentan meter un balón en la portería contraria.",
+          "answer": "Waterpolo"
+        },
+        {
+          "type": "starts",
+          "question": "Deporte que se practica sobre una tabla con vela, deslizándose por el agua impulsado por el viento.",
+          "answer": "Windsurf"
+        },
+        {
+          "type": "contains",
+          "question": "Dos rebanadas de pan de molde con algo dentro, como jamón y queso.",
+          "answer": "Sándwich"
         }
       ],
       "X": [
@@ -608,6 +637,23 @@
           "answer": "Jaguar"
         }
       ],
+      "K": [
+        {
+          "type": "starts",
+          "question": "Marsupial australiano que vive en los eucaliptos y se alimenta de sus hojas.",
+          "answer": "Koala"
+        },
+        {
+          "type": "starts",
+          "question": "Pequeña embarcación estrecha que se mueve con una pala de dos hojas.",
+          "answer": "Kayak"
+        },
+        {
+          "type": "starts",
+          "question": "Salsa de tomate espesa y dulce que se suele poner a las patatas fritas.",
+          "answer": "Kétchup"
+        }
+      ],
       "L": [
         {
           "type": "starts",
@@ -810,6 +856,23 @@
           "type": "starts",
           "question": "Personaje de leyenda que chupa la sangre y no se refleja en los espejos.",
           "answer": "Vampiro"
+        }
+      ],
+      "W": [
+        {
+          "type": "starts",
+          "question": "Conexión inalámbrica a internet.",
+          "answer": "Wifi"
+        },
+        {
+          "type": "starts",
+          "question": "Capital de Estados Unidos.",
+          "answer": "Washington"
+        },
+        {
+          "type": "contains",
+          "question": "Archipiélago del océano Pacífico que es un estado de Estados Unidos, famoso por sus volcanes y el surf.",
+          "answer": "Hawái"
         }
       ],
       "X": [

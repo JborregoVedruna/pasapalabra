@@ -1,7 +1,7 @@
-/** Letras del rosco (abecedario español sin K ni W). */
+/** Letras del rosco: las 27 del abecedario español, incluidas K y W. */
 export const ROSCO_LETTERS = [
-  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'L', 'M', 'N',
-  'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z',
+  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
+  'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
 ] as const;
 
 export type RoscoLetter = (typeof ROSCO_LETTERS)[number];
